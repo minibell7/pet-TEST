@@ -200,26 +200,6 @@ export default function CompatibilityDetail() {
                     </div>
                 </div>
 
-                {/* Share Button */}
-                <div className="pt-8 pb-4">
-                    <Button
-                        className="w-full h-14 text-lg rounded-xl shadow-lg bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity"
-                        onClick={() => {
-                            if (navigator.share) {
-                                navigator.share({
-                                    title: 'Pet-BTI Detailed Report',
-                                    text: language === 'ko' ? '우리 아이와의 상세 궁합을 확인해보세요!' : 'Check out our detailed compatibility report!',
-                                    url: window.location.href,
-                                });
-                            } else {
-                                navigator.clipboard.writeText(window.location.href);
-                                alert(language === 'ko' ? '링크가 복사되었습니다!' : 'Link copied!');
-                            }
-                        }}
-                    >
-                        🔗 {language === 'ko' ? '리포트 공유하기' : 'Share Report'}
-                    </Button>
-                </div>
 
             </main>
         </div>
