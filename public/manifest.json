@@ -1,0 +1,26 @@
+{
+  "name": "Pet-BTI: 반려동물 & 주인 궁합 테스트",
+  "short_name": "Pet-BTI",
+  "description": "반려동물과 주인의 성격 궁합을 분석하는 재미있는 테스트",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#a855f7",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "entertainment"],
+  "lang": "ko"
+}
