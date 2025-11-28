@@ -132,4 +132,65 @@ export const ko = {
     shareFailed: '공유에 실패했습니다',
     shareFailedDesc: '다시 시도해주세요.',
   },
+
+  // Home
+  home: {
+    title: 'Pet-BTI',
+    subtitle: '반려동물과 함께하는 즐거운 일상',
+    menu: {
+      petBti: '반려동물 궁합',
+      petBtiDesc: '우리 아이 성격과 나의 궁합은?',
+      dailyFortune: '오늘의 운세',
+      dailyFortuneDesc: '매일매일 확인하는 우리 궁합',
+      ageCalculator: '나이 계산기',
+      ageCalculatorDesc: '사람 나이로 환산하면 몇 살?',
+      feedCalculator: '사료 계산기',
+      feedCalculatorDesc: '하루에 얼마나 먹여야 할까?',
+      petTranslator: '멍냥 번역기',
+      petTranslatorDesc: '이 행동은 무슨 뜻일까?',
+    }
+  },
+
+  // Feed Calculator
+  feedCalculator: {
+    title: '사료 급여량 계산기',
+    subtitle: '하루 적정 칼로리와 급여량 계산',
+    petType: '반려동물 종류',
+    weight: '몸무게 (kg)',
+    age: '나이 단계',
+    activity: '활동량',
+    calorie: '사료 칼로리 (kcal/kg)',
+    calculate: '계산하기',
+    result: '일일 권장 급여량',
+    dailyCalorie: '일일 권장 칼로리',
+    dailyAmount: '일일 권장 사료 양',
+    cup: '종이컵 기준 약',
+    cupUnit: '컵',
+    puppy: '퍼피/자견 (1년 미만)',
+    adult: '성견/성묘 (1~7년)',
+    senior: '노견/노묘 (7년 이상)',
+    lowActivity: '적음 (실내 생활 위주)',
+    normalActivity: '보통 (일반적인 산책/놀이)',
+    highActivity: '많음 (활발한 활동)',
+  },
+
+  // Pet Translator
+  petTranslator: {
+    title: '멍냥 행동 번역기',
+    subtitle: '반려동물의 행동 언어 해석',
+    dog: '강아지',
+    cat: '고양이',
+    category: '카테고리',
+    action: '행동 선택',
+    meaning: '이런 뜻이에요!',
+    tip: '집사님을 위한 팁',
+    selectAction: '행동을 선택해주세요',
+    categories: {
+      tail: '꼬리',
+      ears: '귀',
+      eyes: '눈',
+      posture: '자세',
+      sound: '소리',
+    }
+  },
 };

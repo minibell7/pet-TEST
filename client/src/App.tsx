@@ -5,7 +5,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n";
-import Landing from "@/pages/landing";
+import Home from "@/pages/home";
+import PetBTIIntro from "@/pages/pet-bti-intro";
+import FeedCalculator from "@/pages/feed-calculator";
+import PetTranslator from "@/pages/pet-translator";
 import PetInfo from "@/pages/pet-info";
 import DogQuiz from "@/pages/dog-quiz";
 import CatQuiz from "@/pages/cat-quiz";
@@ -22,7 +25,10 @@ import NotFound from "@/pages/not-found";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Landing} />
+      <Route path="/" component={Home} />
+      <Route path="/pet-bti" component={PetBTIIntro} />
+      <Route path="/feed-calculator" component={FeedCalculator} />
+      <Route path="/pet-translator" component={PetTranslator} />
       <Route path="/pet-info" component={PetInfo} />
       <Route path="/dog-quiz" component={DogQuiz} />
       <Route path="/cat-quiz" component={CatQuiz} />

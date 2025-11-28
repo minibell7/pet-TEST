@@ -132,4 +132,65 @@ export const en = {
     shareFailed: 'Share failed',
     shareFailedDesc: 'Please try again.',
   },
+
+  // Home
+  home: {
+    title: 'Pet-BTI',
+    subtitle: 'Fun daily life with your pet',
+    menu: {
+      petBti: 'Pet Compatibility',
+      petBtiDesc: 'Check compatibility with your pet',
+      dailyFortune: 'Daily Fortune',
+      dailyFortuneDesc: 'Check your daily fortune',
+      ageCalculator: 'Age Calculator',
+      ageCalculatorDesc: 'How old is your pet in human years?',
+      feedCalculator: 'Feed Calculator',
+      feedCalculatorDesc: 'How much should I feed?',
+      petTranslator: 'Pet Translator',
+      petTranslatorDesc: 'What does this behavior mean?',
+    }
+  },
+
+  // Feed Calculator
+  feedCalculator: {
+    title: 'Feed Calculator',
+    subtitle: 'Calculate daily calories and feed amount',
+    petType: 'Pet Type',
+    weight: 'Weight (kg)',
+    age: 'Life Stage',
+    activity: 'Activity Level',
+    calorie: 'Feed Calorie (kcal/kg)',
+    calculate: 'Calculate',
+    result: 'Daily Recommended Amount',
+    dailyCalorie: 'Daily Recommended Calories',
+    dailyAmount: 'Daily Recommended Feed',
+    cup: 'Approx. in cups',
+    cupUnit: 'cups',
+    puppy: 'Puppy/Kitten (<1 year)',
+    adult: 'Adult (1~7 years)',
+    senior: 'Senior (7+ years)',
+    lowActivity: 'Low (Indoor)',
+    normalActivity: 'Normal (Regular walks/play)',
+    highActivity: 'High (Active)',
+  },
+
+  // Pet Translator
+  petTranslator: {
+    title: 'Pet Translator',
+    subtitle: 'Interpret pet body language',
+    dog: 'Dog',
+    cat: 'Cat',
+    category: 'Category',
+    action: 'Select Action',
+    meaning: 'It means...',
+    tip: 'Tip for you',
+    selectAction: 'Please select an action',
+    categories: {
+      tail: 'Tail',
+      ears: 'Ears',
+      eyes: 'Eyes',
+      posture: 'Posture',
+      sound: 'Sound',
+    }
+  },
 };

@@ -1,14 +1,13 @@
 import { useLocation, Link } from 'wouter';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { storage } from '@/lib/storage';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { LanguageToggle } from '@/components/language-toggle';
 import { useI18n } from '@/lib/i18n';
-import { Sparkles, Cake } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import type { PetSpecies } from '@shared/schema';
 
-export default function Landing() {
+export default function PetBTIIntro() {
   const [, setLocation] = useLocation();
   const { t } = useI18n();
 
@@ -19,6 +18,13 @@ export default function Landing() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-accent/10 px-4 relative">
+      <div className="absolute top-4 left-4">
+        <Link href="/">
+          <Button variant="ghost" size="icon">
+            <ArrowLeft className="w-6 h-6" />
+          </Button>
+        </Link>
+      </div>
       <div className="absolute top-4 right-4 flex gap-2">
         <LanguageToggle />
         <ThemeToggle />
@@ -62,48 +68,6 @@ export default function Landing() {
                 <span>{t('landing.cat')}</span>
               </span>
             </Button>
-          </div>
-        </div>
-
-        <div className="space-y-6 pt-8 border-t border-border/40">
-          <p className="text-lg font-semibold text-foreground/80">
-            {t('landing.quickFeatures')}
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/daily-fortune">
-              <Card className="p-6 hover-elevate cursor-pointer transition-all h-full">
-                <div className="flex items-start gap-4">
-                  <div className="text-4xl">🔮</div>
-                  <div className="flex-1 space-y-2">
-                    <h3 className="font-bold text-lg text-card-foreground flex items-center gap-2">
-                      <Sparkles className="w-5 h-5" />
-                      {t('landing.dailyFortune')}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {t('landing.dailyFortuneDesc')}
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            </Link>
-
-            <Link href="/age-calculator">
-              <Card className="p-6 hover-elevate cursor-pointer transition-all h-full">
-                <div className="flex items-start gap-4">
-                  <div className="text-4xl">🎂</div>
-                  <div className="flex-1 space-y-2">
-                    <h3 className="font-bold text-lg text-card-foreground flex items-center gap-2">
-                      <Cake className="w-5 h-5" />
-                      {t('landing.ageCalculator')}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {t('landing.ageCalculatorDesc')}
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            </Link>
           </div>
         </div>
       </div>
