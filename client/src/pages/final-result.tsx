@@ -41,7 +41,7 @@ export default function FinalResult() {
     setPetResult(state.petResult);
     setOwnerResult(state.ownerResult);
     setPetSpecies(state.petSpecies);
-    
+
     // 저장된 생년월일 불러오기
     const savedBirthDate = getPetBirthDate();
     if (savedBirthDate) {
@@ -55,7 +55,7 @@ export default function FinalResult() {
     const newBirthDate = e.target.value;
     setBirthDate(newBirthDate);
     savePetBirthDate(newBirthDate);
-    
+
     if (petSpecies && newBirthDate) {
       const age = calculatePetAge(petSpecies, newBirthDate);
       setPetAge(age);
@@ -73,7 +73,7 @@ export default function FinalResult() {
 
   const handleShareImage = async () => {
     if (!resultRef.current) return;
-    
+
     setIsGenerating(true);
     try {
       const dataUrl = await toPng(resultRef.current, {
@@ -100,7 +100,7 @@ export default function FinalResult() {
         link.download = 'pet-bti-result.png';
         link.href = dataUrl;
         link.click();
-        
+
         toast({
           title: t('toast.imageDownloaded'),
           description: t('toast.imageDownloadedDesc'),
@@ -119,8 +119,8 @@ export default function FinalResult() {
   };
 
   const handleShareLink = async () => {
-    const shareUrl = 'https://pet-bti.com';
-    const shareText = language === 'ko' 
+    const shareUrl = 'https://pet-bti.mini-bell.com';
+    const shareText = language === 'ko'
       ? '나랑 반려동물 궁합 테스트 해봐! 🐶🐱'
       : 'Take the Pet-BTI compatibility test with me! 🐶🐱';
     const fullMessage = `${shareText}\n\n${shareUrl}`;
@@ -204,64 +204,64 @@ export default function FinalResult() {
             </p>
           </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <Card className="bg-card border-card-border">
-            <CardContent className="p-6 md:p-8 text-center space-y-4">
-              <div className="text-6xl">{petTypeInfo.emoji}</div>
-              <div className="space-y-2">
-                <p className="text-sm text-muted-foreground">
-                  <span className="font-bold">{petName}</span> {t('finalResult.petTypeLabel')}
-                </p>
-                <h3 className="text-xl md:text-2xl font-bold text-card-foreground">
-                  {petTypeName}
-                </h3>
-                <p className="text-sm text-muted-foreground italic px-4 break-words">
-                  "{language === 'en' && petTypeInfo.descriptionEn ? petTypeInfo.descriptionEn : petTypeInfo.description}"
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <Card className="bg-card border-card-border">
+              <CardContent className="p-6 md:p-8 text-center space-y-4">
+                <div className="text-6xl">{petTypeInfo.emoji}</div>
+                <div className="space-y-2">
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-bold">{petName}</span> {t('finalResult.petTypeLabel')}
+                  </p>
+                  <h3 className="text-xl md:text-2xl font-bold text-card-foreground">
+                    {petTypeName}
+                  </h3>
+                  <p className="text-sm text-muted-foreground italic px-4 break-words">
+                    "{language === 'en' && petTypeInfo.descriptionEn ? petTypeInfo.descriptionEn : petTypeInfo.description}"
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
 
-          <Card className="bg-card border-card-border">
-            <CardContent className="p-6 md:p-8 text-center space-y-4">
-              <div className="text-6xl">{ownerTypeInfo.emoji}</div>
-              <div className="space-y-2">
-                <p className="text-sm text-muted-foreground">
-                  <span className="font-bold">{ownerName}</span>{language === 'ko' ? '님의' : '\'s'} {t('finalResult.ownerTypeLabel')}
-                </p>
-                <h3 className="text-xl md:text-2xl font-bold text-card-foreground">
-                  {ownerTypeName}
-                </h3>
-                <p className="text-sm text-muted-foreground italic px-4 break-words">
-                  "{language === 'en' && ownerTypeInfo.descriptionEn ? ownerTypeInfo.descriptionEn : ownerTypeInfo.description}"
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        <Card className="bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border-primary/30 shadow-2xl">
-          <CardContent className="p-8 md:p-12 text-center space-y-6">
-            <div className="text-8xl md:text-9xl">
-              {compatibility.emoji}
-            </div>
-            
-            <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                {compatibilityTitle}
-              </h2>
-              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
-                {compatibilityDescription}
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
-        <div className="text-center space-y-2 pt-4">
-          <div className="inline-block px-4 py-2 bg-primary/10 rounded-lg border border-primary/20">
-            <p className="text-sm font-semibold text-primary">🔗 pet-bti.com</p>
+            <Card className="bg-card border-card-border">
+              <CardContent className="p-6 md:p-8 text-center space-y-4">
+                <div className="text-6xl">{ownerTypeInfo.emoji}</div>
+                <div className="space-y-2">
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-bold">{ownerName}</span>{language === 'ko' ? '님의' : '\'s'} {t('finalResult.ownerTypeLabel')}
+                  </p>
+                  <h3 className="text-xl md:text-2xl font-bold text-card-foreground">
+                    {ownerTypeName}
+                  </h3>
+                  <p className="text-sm text-muted-foreground italic px-4 break-words">
+                    "{language === 'en' && ownerTypeInfo.descriptionEn ? ownerTypeInfo.descriptionEn : ownerTypeInfo.description}"
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
-        </div>
+
+          <Card className="bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border-primary/30 shadow-2xl">
+            <CardContent className="p-8 md:p-12 text-center space-y-6">
+              <div className="text-8xl md:text-9xl">
+                {compatibility.emoji}
+              </div>
+
+              <div className="space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                  {compatibilityTitle}
+                </h2>
+                <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+                  {compatibilityDescription}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="text-center space-y-2 pt-4">
+            <div className="inline-block px-4 py-2 bg-primary/10 rounded-lg border border-primary/20">
+              <p className="text-sm font-semibold text-primary">🔗 pet-bti.mini-bell.com</p>
+            </div>
+          </div>
         </div>
 
         {compatibility.tips && compatibility.tips.length > 0 && (
@@ -275,12 +275,12 @@ export default function FinalResult() {
                   {t('finalResult.practicalTipsDesc')}
                 </p>
               </div>
-              
+
               <Accordion type="single" collapsible className="w-full">
                 {compatibility.tips.map((tip, index) => {
                   const category = language === 'en' && tip.categoryEn ? tip.categoryEn : tip.category;
                   const content = language === 'en' && tip.contentEn ? tip.contentEn : tip.content;
-                  
+
                   return (
                     <AccordionItem key={index} value={`tip-${index}`}>
                       <AccordionTrigger className="text-left hover-elevate active-elevate-2 px-2" data-testid={`accordion-tip-${index}`}>
@@ -310,9 +310,9 @@ export default function FinalResult() {
                 </h3>
               </div>
               <p className="text-sm text-muted-foreground">
-                {t('dailyFortune.subtitle', { 
-                  petName, 
-                  ownerName, 
+                {t('dailyFortune.subtitle', {
+                  petName,
+                  ownerName,
                   date: new Date().toLocaleDateString(language === 'ko' ? 'ko-KR' : 'en-US', { month: 'long', day: 'numeric' })
                 })}
               </p>
@@ -322,10 +322,10 @@ export default function FinalResult() {
                 {getDailyFortune(petResult, ownerResult).fortunes.map((fortune, index) => {
                   const category = language === 'en' ? fortune.categoryEn : fortune.category;
                   const message = language === 'en' ? fortune.messageEn : fortune.message;
-                  
+
                   return (
-                    <div 
-                      key={index} 
+                    <div
+                      key={index}
                       className="bg-white/50 dark:bg-black/20 rounded-lg p-4 md:p-6 space-y-3 hover-elevate"
                       data-testid={`fortune-card-${index}`}
                     >
