@@ -38,6 +38,13 @@ export interface TypeInfo {
   descriptionEn?: string; // 영어 설명 (선택적)
   traits: string[];
   traitsEn?: string[]; // 영어 특징들 (선택적)
+  stats?: {
+    energy: number;
+    affection: number;
+    independence: number;
+    curiosity: number;
+    calmness: number;
+  };
 }
 
 // 궁합 팁 인터페이스
@@ -61,6 +68,16 @@ export interface CompatibilityResult {
   description: string;
   descriptionEn?: string; // 영어 설명 (선택적)
   tips?: CompatibilityTip[]; // 실용 팁 (선택적)
+  detailReport?: {
+    analysis: string;
+    analysisEn: string;
+    missions: string[];
+    missionsEn: string[];
+    letterToOwner: string;
+    letterToOwnerEn: string;
+    letterToPet: string;
+    letterToPetEn: string;
+  };
 }
 
 // 상세 궁합 분석 인터페이스

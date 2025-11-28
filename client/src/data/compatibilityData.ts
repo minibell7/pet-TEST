@@ -34,7 +34,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '새로운 산책 코스를 계속 개발하고, \'기다려\' 훈련을 마스터하면 서로의 신뢰가 더욱 깊어집니다.',
         contentEn: 'Keep developing new walking routes and master \'wait\' training to deepen mutual trust.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '서로의 에너지가 폭발하는 환상의 짝꿍입니다! 강아지의 모험심을 보호자님의 열정이 완벽하게 이끌어줍니다.',
+      analysisEn: 'A fantastic duo with exploding energy! Your passion perfectly guides the dog\'s adventurous spirit.',
+      missions: ['함께 등산하기', '어질리티 훈련 도전', '새로운 산책로 개척'],
+      missionsEn: ['Hiking together', 'Try agility training', 'Explore new walking paths'],
+      letterToOwner: '주인님! 저랑 같이 뛰어놀아줘서 너무 고마워요! 우리는 최고의 팀이에요!',
+      letterToOwnerEn: 'Owner! Thanks for running with me! We are the best team!',
+      letterToPet: '나의 최고의 파트너! 너와 함께라면 어디든 갈 수 있어. 오늘도 신나게 달리자!',
+      letterToPetEn: 'My best partner! I can go anywhere with you. Let\'s run happily today too!'
+    }
   },
   'D-E_O-C': {
     petType: 'D-E',
@@ -68,7 +78,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '강아지가 \'애정 = 모든 것 허용\'으로 오해하지 않도록, 보호자님의 일관성이 필요합니다.',
         contentEn: 'Your consistency is needed so dog doesn\'t mistake \'affection = everything allowed\'.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '강아지의 무한한 에너지를 보호자님의 사랑으로 감싸주는 관계입니다. 가끔은 지칠 수 있지만, 그만큼 사랑도 깊어요.',
+      analysisEn: 'A relationship where your love embraces the dog\'s infinite energy. Sometimes tiring, but the love is deep.',
+      missions: ['산책 후 발 닦아주며 마사지', '터그 놀이 10분', '함께 낮잠 자기'],
+      missionsEn: ['Massage paws after walk', '10 min tug play', 'Nap together'],
+      letterToOwner: '주인님은 나를 정말 사랑하나 봐요! 나도 주인님이 세상에서 제일 좋아요!',
+      letterToOwnerEn: 'You must really love me! I love you the most in the world too!',
+      letterToPet: '너의 그 넘치는 에너지도 다 사랑스러워. 다치지만 말고 건강하게만 자라다오.',
+      letterToPetEn: 'Even your overflowing energy is adorable. Just grow up healthy without getting hurt.'
+    }
   },
   'D-E_O-L': {
     petType: 'D-E',
@@ -102,7 +122,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '강아지가 혼자서도 에너지를 풀 수 있도록, 튼튼한 터그 장난감이나 노즈워크 매트를 구비해두는 것을 추천합니다.',
         contentEn: 'Provide sturdy tug toys or nosework mats so dog can release energy independently.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '서로 다른 템포를 가진 두 존재가 만나 의외의 조화를 이룹니다. 강아지는 보호자에게 활력을, 보호자는 강아지에게 휴식을 줍니다.',
+      analysisEn: 'Two beings with different tempos create unexpected harmony. Dog gives vitality, you give rest.',
+      missions: ['벤치에 앉아서 롱리드 산책', '집에서 노즈워크 하기', '조용한 공원에서 멍때리기'],
+      missionsEn: ['Long leash walk sitting on bench', 'Indoor nosework', 'Spacing out in quiet park'],
+      letterToOwner: '주인님은 항상 여유로워 보여요. 저도 주인님 옆에 있으면 마음이 편해져요.',
+      letterToOwnerEn: 'You always look relaxed. I feel comfortable beside you too.',
+      letterToPet: '너 덕분에 내가 밖에도 나가고 웃게 돼. 나의 활력소, 고마워.',
+      letterToPetEn: 'Thanks to you, I go out and smile. Thank you, my energizer.'
+    }
   },
   'D-E_O-P': {
     petType: 'D-E',
@@ -136,7 +166,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '모든 것을 통제하려 하면 강아지가 스트레스를 받을 수 있어요. 안전이 확인된 공간에서는 조금 자유롭게 놔주셔도 좋습니다.',
         contentEn: 'Over-control may stress dog. In verified safe spaces, allow some freedom.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '보호자님의 꼼꼼한 케어 덕분에 강아지는 안전하게 모험을 즐길 수 있습니다. 완벽한 서포터와 플레이어의 관계!',
+      analysisEn: 'Thanks to your meticulous care, dog enjoys adventures safely. Perfect supporter and player relationship!',
+      missions: ['안전한 애견 운동장 방문', '건강 검진 받기', '천연 간식 만들기'],
+      missionsEn: ['Visit safe dog park', 'Health checkup', 'Make natural treats'],
+      letterToOwner: '주인님은 항상 나를 지켜줘요! 주인님 뒤에 숨으면 무서운 게 없어요!',
+      letterToOwnerEn: 'You always protect me! I fear nothing when hiding behind you!',
+      letterToPet: '네가 다치지 않고 행복하게 뛰어노는 게 나의 가장 큰 기쁨이야.',
+      letterToPetEn: 'Seeing you run happily without getting hurt is my greatest joy.'
+    }
   },
   'D-F_O-T': {
     petType: 'D-F',
@@ -170,7 +210,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '간식을 숨기는 \'노즈워크\' 놀이는 미식가 강아지의 두뇌와 후각을 동시에 만족시키는 최고의 놀이입니다.',
         contentEn: '\'Nosework\' hiding treats satisfies foodie dog\'s brain and sense of smell simultaneously.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '간식을 매개로 완벽한 소통이 이루어지는 관계입니다. 훈련 성과가 가장 빠르게 나타나는 엘리트 커플!',
+      analysisEn: 'Perfect communication through treats. Elite couple with fastest training results!',
+      missions: ['새로운 개인기 하나 배우기', '기다려 훈련 1분 도전', '간식 숨기기 놀이'],
+      missionsEn: ['Learn one new trick', '1 min wait challenge', 'Hide treats game'],
+      letterToOwner: '주인님 말만 잘 들으면 맛있는 게 나와요! 공부가 제일 재미있어요!',
+      letterToOwnerEn: 'Yummy things come when I listen to you! Studying is most fun!',
+      letterToPet: '똑똑한 우리 강아지, 하나를 가르치면 열을 아네! 간식 줄 맛이 난다.',
+      letterToPetEn: 'Smart doggy, learns so fast! It\'s a joy to give treats.'
+    }
   },
   'D-F_O-C': {
     petType: 'D-F',
@@ -204,7 +254,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '간식도 건강하게! 고구마, 당근, 브로콜리 등 건강한 야채 간식으로 대체하는 것을 추천합니다.',
         contentEn: 'Healthy treats too! Recommend substituting with healthy veggie treats like sweet potato, carrot, broccoli.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '서로 먹여주고 먹는 기쁨을 나누는 행복한 관계입니다. 사랑이 과해서 체중이 늘어날 수 있으니 주의!',
+      analysisEn: 'Happy relationship sharing joy of feeding and eating. Beware of weight gain from too much love!',
+      missions: ['다이어트 사료로 바꾸기', '간식 대신 양배추 주기', '함께 산책하며 칼로리 태우기'],
+      missionsEn: ['Switch to diet food', 'Cabbage instead of treats', 'Burn calories walking together'],
+      letterToOwner: '주인님은 천사예요! 맛있는 걸 계속 줘요. 사랑해요!',
+      letterToOwnerEn: 'You are an angel! You keep giving yummy things. I love you!',
+      letterToPet: '잘 먹는 모습만 봐도 배가 불러. 그래도 건강을 위해 조금만 줄이자.',
+      letterToPetEn: 'I\'m full just watching you eat. But let\'s reduce a bit for health.'
+    }
   },
   'D-F_O-L': {
     petType: 'D-F',
@@ -238,7 +298,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '밥시간을 정확하게 지키는 것이 이 조합의 평화를 유지하는 비결입니다. 강아지의 \'견체시계\'는 정확하니까요!',
         contentEn: 'Keeping meal times precise maintains this combo\'s peace. Dog\'s \'internal clock\' is accurate!'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '느긋하게 미식을 즐기는 품격 있는 관계입니다. 급하게 먹지 않고 음미할 줄 아는 여유가 있어요.',
+      analysisEn: 'Classy relationship enjoying gourmet slowly. Leisure to savor without rushing.',
+      missions: ['슬로우 식기로 밥 먹기', '조용한 곳에서 간식 타임', '함께 클래식 음악 듣기'],
+      missionsEn: ['Eat with slow feeder', 'Quiet treat time', 'Listen to classical music'],
+      letterToOwner: '주인님과 함께 밥 먹을 때가 제일 편안해요. 우리 천천히 먹어요.',
+      letterToOwnerEn: 'Most comfortable when eating with you. Let\'s eat slowly.',
+      letterToPet: '너랑 있으면 시간이 느리게 가는 것 같아. 이 평화로움이 참 좋다.',
+      letterToPetEn: 'Time seems to slow down with you. I love this peace.'
+    }
   },
   'D-F_O-P': {
     petType: 'D-F',
@@ -272,7 +342,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '간식을 활용한 노즈워크 놀이도 좋지만, 식탐이 너무 강하다면 \'공놀이\' 등 활동적인 놀이로 체중 관리를 병행해 주세요.',
         contentEn: 'Treat-based nosework is good, but if too food-motivated, combine with active play like fetch for weight management.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '건강과 영양을 최우선으로 생각하는 웰빙 커플입니다. 강아지의 건강 수명이 가장 길어질 수 있는 조합!',
+      analysisEn: 'Well-being couple prioritizing health and nutrition. Combo for longest healthy lifespan!',
+      missions: ['영양제 챙겨 먹기', '사료 성분 공부하기', '매일 몸무게 체크'],
+      missionsEn: ['Take supplements', 'Study food ingredients', 'Daily weight check'],
+      letterToOwner: '주인님이 주는 건 맛이 좀 없...지만 몸이 튼튼해지는 기분이에요!',
+      letterToOwnerEn: 'What you give tastes... okay, but I feel stronger!',
+      letterToPet: '좋은 것만 먹이고 싶어. 아프지 말고 오래오래 같이 살자.',
+      letterToPetEn: 'I want to feed you only the best. Stay healthy and live long with me.'
+    }
   },
   'D-Z_O-T': {
     petType: 'D-Z',
@@ -306,7 +386,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '격한 놀이보다 \'간식 숨기기\'나 \'가벼운 산책\'처럼 강아지의 페이스에 맞는 활동을 찾아주세요.',
         contentEn: 'Find activities matching dog\'s pace like \'hide treats\' or \'light walks\' rather than intense play.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '서로의 속도를 맞춰가는 과정에서 깊은 신뢰가 쌓입니다. 훈련사는 인내심을, 강아지는 규칙을 배웁니다.',
+      analysisEn: 'Deep trust builds as you match speeds. Trainer learns patience, dog learns rules.',
+      missions: ['5분간 눈 맞추기', '천천히 걷기 훈련', '기다려 훈련 심화'],
+      missionsEn: ['5 min eye contact', 'Slow walking training', 'Advanced wait training'],
+      letterToOwner: '주인님, 조금만 천천히 해요. 저는 생각할 시간이 필요해요.',
+      letterToOwnerEn: 'Master, slow down a bit. I need time to think.',
+      letterToPet: '네 덕분에 기다림의 미학을 배워. 천천히 가도 괜찮아.',
+      letterToPetEn: 'Thanks to you I learn aesthetics of waiting. It\'s okay to go slow.'
+    }
   },
   'D-Z_O-C': {
     petType: 'D-Z',
@@ -340,7 +430,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '너무 움직이지 않으면 둘 다 살찔 수 있어요! 하루 한 번, 아주 짧게라도 \'동네 한 바퀴 산책\'은 필수입니다.',
         contentEn: 'Too little movement may make both gain weight! Short \'neighborhood walk\' once daily is essential.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '함께 뒹굴거리는 것이 최고의 행복인 소울메이트입니다. 서로의 체온을 느끼며 쉬는 시간이 가장 소중해요.',
+      analysisEn: 'Soulmates where rolling around together is happiness. Resting feeling each other\'s warmth is precious.',
+      missions: ['소파에서 함께 낮잠', '서로 기대어 TV 보기', '부드러운 마사지'],
+      missionsEn: ['Nap together on sofa', 'Watch TV leaning on each other', 'Gentle massage'],
+      letterToOwner: '주인님 품이 세상에서 제일 푹신해요. 우리 평생 이렇게 누워있어요.',
+      letterToOwnerEn: 'Your arms are softest in the world. Let\'s lie here forever.',
+      letterToPet: '너랑 껴안고 있으면 모든 스트레스가 풀려. 나의 힐링 요정.',
+      letterToPetEn: 'Hugging you relieves all stress. My healing fairy.'
+    }
   },
   'D-Z_O-L': {
     petType: 'D-Z',
@@ -374,7 +474,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '가끔은 서로 다른 방에서 \'개인의 시간\'을 갖는 것도 이 성숙한 관계를 유지하는 비결입니다.',
         contentEn: 'Sometimes having \'personal time\' in different rooms is secret to maintaining this mature relationship.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '말하지 않아도 통하는 완벽한 텔레파시 커플. 공기처럼 편안하고 물처럼 자연스러운 관계입니다.',
+      analysisEn: 'Telepathic couple understanding without words. Comfortable like air, natural like water.',
+      missions: ['말없이 서로 바라보기', '같은 공간에서 각자 할 일 하기', '조용한 산책'],
+      missionsEn: ['Stare without words', 'Do own things in same space', 'Quiet walk'],
+      letterToOwner: '말하지 않아도 알아요. 주인님이 저를 얼마나 사랑하는지.',
+      letterToOwnerEn: 'I know without words. How much you love me.',
+      letterToPet: '존재만으로도 위로가 되는 너. 우리는 전생에 부부였을까?',
+      letterToPetEn: 'Comforting just by existing. Were we a couple in past life?'
+    }
   },
   'D-Z_O-P': {
     petType: 'D-Z',
@@ -408,7 +518,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '건강 검진은 정기적으로! 보호자님의 걱정을 덜어줄 가장 확실한 방법은 \'정기 검진\'입니다.',
         contentEn: 'Regular health checkups! \'Regular checkups\' are surest way to ease your worries.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '조용한 강아지를 보며 "어디 아픈가?" 걱정하지만, 사실은 그저 평화로운 상태일 뿐입니다. 안심하세요!',
+      analysisEn: 'Worrying "Is he sick?" seeing quiet dog, but actually just peaceful. Relax!',
+      missions: ['심박수 체크하며 안심하기', '따뜻한 찜질 해주기', '건강 일기 쓰기'],
+      missionsEn: ['Check heart rate to relax', 'Warm compress', 'Write health diary'],
+      letterToOwner: '저 안 아파요! 그냥 자는 게 좋은 거예요. 걱정 마세요!',
+      letterToOwnerEn: 'I\'m not sick! Just like sleeping. Don\'t worry!',
+      letterToPet: '너무 조용해서 숨 쉬나 확인해봤어. 건강하게만 있어줘.',
+      letterToPetEn: 'Checked if breathing cause too quiet. Just stay healthy.'
+    }
   },
   'D-S_O-T': {
     petType: 'D-S',
@@ -442,7 +562,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '너무 흥분해서 다른 강아지나 사람에게 달려들지 않도록, \'기다려\'와 \'이리 와\' 훈련은 필수입니다!',
         contentEn: 'To prevent over-excitement and jumping on others, \'wait\' and \'come\' training are essential!'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '어딜 가나 인기 만점! 사람들의 시선을 즐기는 스타 커플입니다. 함께 개인기를 연습하고 뽐내는 것이 즐거움!',
+      analysisEn: 'Popular everywhere! Star couple enjoying attention. Fun to practice and show off tricks!',
+      missions: ['새로운 개인기 영상 찍기', '애견 동반 카페 투어', '커플룩 입고 산책'],
+      missionsEn: ['Film new trick video', 'Dog cafe tour', 'Walk in couple look'],
+      letterToOwner: '주인님! 저기 봐요! 사람들이 나 예쁘대요! 빨리 간식 줘요!',
+      letterToOwnerEn: 'Look! People say I\'m pretty! Give me treats quick!',
+      letterToPet: '우리 애기 천재 아니야? 어떻게 이렇게 잘해? 너무 자랑스러워!',
+      letterToPetEn: 'Isn\'t my baby a genius? How so good? So proud!'
+    }
   },
   'D-S_O-C': {
     petType: 'D-S',
@@ -476,7 +606,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '강아지는 보호자님의 \'반응\'을 즐깁니다. 숨바꼭질, 까꿍 놀이 등 보호자님이 크게 리액션해주는 놀이를 좋아합니다.',
         contentEn: 'Dog enjoys your \'reactions\'. Loves play like hide-and-seek, peekaboo where you react enthusiastically.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '사랑이 넘쳐흐르는 핑크빛 관계. 강아지의 애교에 보호자는 녹아내리고, 그 사랑에 강아지는 더 사랑스러워집니다.',
+      analysisEn: 'Pink relationship overflowing with love. You melt at dog\'s charm, dog becomes cuter with that love.',
+      missions: ['하루 100번 뽀뽀하기', '사랑해라고 말해주기', '커플 사진 찍기'],
+      missionsEn: ['100 kisses daily', 'Say I love you', 'Take couple photos'],
+      letterToOwner: '주인님 껌딱지가 될 거야! 화장실도 같이 갈래요!',
+      letterToOwnerEn: 'Gonna be your gum! I\'ll follow to bathroom too!',
+      letterToPet: '너 없으면 어떻게 살았을까? 나의 비타민, 나의 전부.',
+      letterToPetEn: 'How did I live without you? My vitamin, my everything.'
+    }
   },
   'D-S_O-L': {
     petType: 'D-S',
@@ -510,7 +650,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '강아지가 혼자서도 잘 놀 수 있도록 다양한 장난감을 구비해 주고, 보호자님은 가끔 \'관객\'이 되어 칭찬해 주세요.',
         contentEn: 'Provide various toys so dog plays well alone, and you become occasional \'audience\' giving praise.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '강아지의 밝은 에너지가 보호자의 삶을 환하게 비춰줍니다. 우울할 틈이 없는 해피 바이러스 커플!',
+      analysisEn: 'Dog\'s bright energy lights up your life. Happy virus couple with no time for depression!',
+      missions: ['공원에서 신나게 달리기', '장난감으로 터그 놀이', '웃는 얼굴 사진 찍기'],
+      missionsEn: ['Run happily in park', 'Tug play with toy', 'Take smiling photo'],
+      letterToOwner: '주인님! 우울해하지 마요! 내가 있잖아요! 헤헤헤!',
+      letterToOwnerEn: 'Don\'t be sad! I\'m here! Hehehe!',
+      letterToPet: '너만 보면 웃음이 나. 나의 행복 전도사.',
+      letterToPetEn: 'I smile seeing you. My happiness evangelist.'
+    }
   },
   'D-S_O-P': {
     petType: 'D-S',
@@ -544,7 +694,17 @@ const dogCompatibility: Record<string, CompatibilityResult> = {
         content: '사람을 너무 좋아해서 아무나 따라가거나 아무거나 받아먹지 않도록, \'낯선 사람 경계\' 훈련도 필요합니다.',
         contentEn: 'Train \'stranger caution\' so dog doesn\'t follow anyone or accept food from strangers due to loving people too much.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '너무 사랑해서 걱정도 많은 관계. 하지만 강아지는 그 걱정마저 사랑으로 받아들이고 애교로 보답합니다.',
+      analysisEn: 'Love so much, worry so much. But dog accepts worry as love and repays with charm.',
+      missions: ['인식표 꼭 착용하기', '안전한 실내 놀이터 가기', '사랑의 대화 나누기'],
+      missionsEn: ['Wear ID tag', 'Go to safe indoor playground', 'Have loving conversation'],
+      letterToOwner: '주인님, 걱정 마세요. 저는 항상 주인님 곁에 있을 거예요.',
+      letterToOwnerEn: 'Don\'t worry. I\'ll always be by your side.',
+      letterToPet: '잃어버릴까 봐, 다칠까 봐 항상 조마조마해. 너무 소중해서 그래.',
+      letterToPetEn: 'Anxious you might get lost or hurt. Because you\'re so precious.'
+    }
   }
 };
 
@@ -582,7 +742,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '\'수직 공간\'! 지배자가 편안하게 아래를 내려다볼 수 있는 \'캣타워\'나 \'선반\'은 필수입니다.',
         contentEn: '\'Vertical space\'! \'Cat tower\' or \'shelf\' where ruler can comfortably look down is essential.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '왕과 신하의 관계처럼, 서로의 영역과 역할을 존중하는 완벽한 파트너십입니다. 훈련사님의 리더십은 고양이에게 안정감을 줍니다.',
+      analysisEn: 'Like a king and subject, a perfect partnership respecting each other\'s territory and role. Your leadership gives the cat stability.',
+      missions: ['하루 15분 사냥놀이 의식', '하이파이브 훈련 도전', '수직 공간 재배치'],
+      missionsEn: ['15 min hunting ritual', 'High-five challenge', 'Rearrange vertical space'],
+      letterToOwner: '자네, 꽤 쓸만하군. 앞으로도 나를 잘 보필하도록.',
+      letterToOwnerEn: 'You are quite useful. Continue to serve me well.',
+      letterToPet: '너의 그 도도함마저 매력적이야. 평생 너를 모실게.',
+      letterToPetEn: 'Even your arrogance is charming. I will serve you forever.'
+    }
   },
   'C-R_O-C': {
     petType: 'C-R',
@@ -616,7 +786,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '왕의 심기를 거스르지 않도록, 화장실 청소와 밥그릇 관리는 매일 완벽하게 해주세요!',
         contentEn: 'Not to displease monarch, do litter box cleaning and food bowl management perfectly daily!'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '고양이를 왕처럼 모시는 집사님 덕분에 고양이는 매일이 행복합니다. 하지만 가끔은 집사님의 사랑이 부담스러울 수도 있어요!',
+      analysisEn: 'Thanks to the butler treating the cat like a king, the cat is happy every day. But sometimes your love might be overwhelming!',
+      missions: ['눈 키스(천천히 깜빡이기) 3번', '맛있는 간식 조공하기', '빗질해주며 찬양하기'],
+      missionsEn: ['3 slow blinks', 'Offer tasty treats', 'Praise while brushing'],
+      letterToOwner: '음, 츄르 맛이 좋구나. 특별히 머리를 쓰다듬는 것을 허락하노라.',
+      letterToOwnerEn: 'Hmm, the Churu tastes good. I specially allow you to pet my head.',
+      letterToPet: '나의 주인님, 나의 왕이시여. 부디 건강만 하소서.',
+      letterToPetEn: 'My master, my king. Please just stay healthy.'
+    }
   },
   'C-R_O-L': {
     petType: 'C-R',
@@ -650,7 +830,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '각자의 \'개인 공간\'이 중요합니다. 보호자님의 의자와 고양이의 캣타워는 적절한 거리를 유지해 주세요.',
         contentEn: 'Each one\'s \'personal space\' is important. Maintain proper distance between your chair and cat\'s tower.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '서로의 독립성을 존중하는 가장 고양이다운 관계입니다. 굳이 붙어있지 않아도 서로의 존재만으로 편안함을 느낍니다.',
+      analysisEn: 'The most cat-like relationship respecting each other\'s independence. Comfortable just by being there without needing to stick together.',
+      missions: ['같은 공간에서 각자 책/창밖 보기', '조용히 곁에 앉아있기', '서로의 낮잠 시간 지켜주기'],
+      missionsEn: ['Read/Look out window in same room', 'Sit quietly nearby', 'Respect nap times'],
+      letterToOwner: '너는 조용해서 좋아. 내 곁에 있어도 방해가 안 돼.',
+      letterToOwnerEn: 'I like that you are quiet. You don\'t disturb me even when nearby.',
+      letterToPet: '너의 그 우아한 자태를 보는 것만으로도 나는 행복해.',
+      letterToPetEn: 'Just watching your elegant figure makes me happy.'
+    }
   },
   'C-R_O-P': {
     petType: 'C-R',
@@ -684,7 +874,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '고양이가 스트레스 받지 않도록, 과도한 건강 체크나 잦은 병원 방문은 오히려 독이 될 수 있습니다.',
         contentEn: 'So cat doesn\'t stress, excessive health checks or frequent vet visits may be harmful.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '최고급 케어를 제공하는 집사와 그에 걸맞은 품격을 지닌 고양이. 럭셔리하고 건강한 묘생을 보장하는 완벽한 환경입니다.',
+      analysisEn: 'Butler providing premium care and cat with matching dignity. Perfect environment guaranteeing a luxury and healthy cat life.',
+      missions: ['음수량 체크하기', '최고급 모래로 전체 갈이', '건강 검진 예약하기'],
+      missionsEn: ['Check water intake', 'Full litter change with premium sand', 'Book health checkup'],
+      letterToOwner: '내 화장실이 아주 깨끗하군. 마음에 들어. 계속 이렇게 관리해.',
+      letterToOwnerEn: 'My litter box is very clean. I like it. Keep managing it like this.',
+      letterToPet: '최고의 것만 해줄게. 너는 그럴 자격이 있으니까.',
+      letterToPetEn: 'I\'ll give you only the best. Because you deserve it.'
+    }
   },
   'C-G_O-T': {
     petType: 'C-G',
@@ -718,7 +918,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '에너지가 남으면 새벽에 \'우다다\'가 시작됩니다. 자기 전에 확실하게 놀아주는 것이 숙면의 비결입니다.',
         contentEn: 'Leftover energy starts \'zoomies\' at dawn. Playing thoroughly before bed is secret to good sleep.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '고양이의 폭발적인 에너지를 훈련사님의 체계적인 놀이로 완벽하게 해소합니다. 스트레스 없는 건강한 고양이로 자랄 거예요!',
+      analysisEn: 'Cat\'s explosive energy is perfectly released through trainer\'s systematic play. Will grow into a stress-free healthy cat!',
+      missions: ['낚싯대 흔들기 20분', '숨바꼭질 놀이', '새로운 장난감 소개'],
+      missionsEn: ['20 min wand toy', 'Hide and seek', 'Introduce new toy'],
+      letterToOwner: '너랑 노는 게 제일 재밌어! 더 빨리 흔들어봐! 더 높이!',
+      letterToOwnerEn: 'Playing with you is most fun! Shake it faster! Higher!',
+      letterToPet: '너의 그 에너지가 나에게도 활력을 줘. 오늘도 신나게 놀자!',
+      letterToPetEn: 'Your energy gives me vitality too. Let\'s play happily today!'
+    }
   },
   'C-G_O-C': {
     petType: 'C-G',
@@ -752,7 +962,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '고양이의 호기심을 자극하는 \'자동 장난감\'이나 \'퍼즐 토이\'를 제공하면 보호자님이 잠시 쉴 수 있습니다.',
         contentEn: 'Providing \'automatic toys\' or \'puzzle toys\' stimulating cat\'s curiosity lets you rest briefly.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '사고뭉치 고양이와 모든 걸 용서하는 집사. 매일이 시트콤 같지만, 웃음이 끊이지 않는 즐거운 집입니다.',
+      analysisEn: 'Troublemaker cat and forgiving butler. Daily life like a sitcom, but a happy home full of laughter.',
+      missions: ['고양이 엽기 사진 찍기', '어지러진 물건 정리하기(웃으면서)', '새로운 박스 선물하기'],
+      missionsEn: ['Take funny cat photos', 'Tidy up mess (smiling)', 'Gift new box'],
+      letterToOwner: '내가 화분 좀 깼어. 근데 나 귀엽지? 용서해줄 거지?',
+      letterToOwnerEn: 'I broke a pot. But I\'m cute, right? You\'ll forgive me?',
+      letterToPet: '네가 무슨 짓을 해도 귀여워. 다치지만 말아줘.',
+      letterToPetEn: 'Whatever you do is cute. Just don\'t get hurt.'
+    }
   },
   'C-G_O-L': {
     petType: 'C-G',
@@ -786,7 +1006,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '보호자님이 주무시는 동안 고양이가 혼자 놀 수 있도록, \'스크래처\'와 \'숨숨집\'을 충분히 제공해 주세요.',
         contentEn: 'Provide plenty of \'scratchers\' and \'hiding spots\' so cat can play alone while you sleep.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '낮과 밤, 서로 다른 시간을 살지만 묘하게 잘 맞는 룸메이트. 서로의 라이프스타일을 존중하는 쿨한 관계입니다.',
+      analysisEn: 'Day and night, living different times but strangely fitting roommates. Cool relationship respecting each other\'s lifestyle.',
+      missions: ['자기 전 10분 놀아주기', '자동 급식기 설정', '새벽 우다다 감상하기'],
+      missionsEn: ['Play 10 min before bed', 'Set auto feeder', 'Watch dawn zoomies'],
+      letterToOwner: '너 잘 때가 내가 활동할 시간이야. 내 운동회에 초대할게.',
+      letterToOwnerEn: 'When you sleep is my active time. I invite you to my sports day.',
+      letterToPet: '밤새 잘 놀았니? 나는 덕분에 잘 잤어(아마도).',
+      letterToPetEn: 'Did you play well all night? I slept well thanks to you (maybe).'
+    }
   },
   'C-G_O-P': {
     petType: 'C-G',
@@ -820,7 +1050,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '낮 시간에 충분히 놀아주어 에너지를 소모시키면, 밤에 사고 칠 확률이 줄어듭니다.',
         contentEn: 'Playing sufficiently during day to drain energy reduces chance of nighttime accidents.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '활발한 고양이를 보며 노심초사하는 집사님. 하지만 고양이는 집사님의 걱정 덕분에 안전하게 에너지를 발산하고 있어요.',
+      analysisEn: 'Butler anxious watching active cat. But thanks to your worry, cat releases energy safely.',
+      missions: ['관절 매트 깔아주기', '안전한 장난감으로 교체', '캣휠 설치 고려하기'],
+      missionsEn: ['Install joint mats', 'Switch to safe toys', 'Consider cat wheel'],
+      letterToOwner: '나 튼튼해! 걱정 마! 더 높이 뛸 수 있다고!',
+      letterToOwnerEn: 'I\'m strong! Don\'t worry! I can jump higher!',
+      letterToPet: '제발 천천히 좀 다녀. 심장이 떨어질 것 같아.',
+      letterToPetEn: 'Please slow down. My heart is dropping.'
+    }
   },
   'C-C_O-T': {
     petType: 'C-C',
@@ -854,7 +1094,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '보호자님과 \'교감\'하는 놀이를 좋아합니다. \'숨바꼭질\'이나 \'가져와\' 놀이도 가능한 타입입니다.',
         contentEn: 'Loves play that \'bonds\' with you. Type capable of \'hide-and-seek\' or \'fetch\' play too.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '모범생 고양이와 열정적인 훈련사님의 만남! 서로 합이 척척 맞는 최고의 파트너입니다.',
+      analysisEn: 'Model student cat meets passionate trainer! Best partners with perfect chemistry.',
+      missions: ['새로운 개인기 도전', '간식 보상 훈련', '함께 사진 찍기'],
+      missionsEn: ['Challenge new trick', 'Treat reward training', 'Take photos together'],
+      letterToOwner: '주인님이 가르쳐주는 건 다 재밌어요! 또 뭐 할까요?',
+      letterToOwnerEn: 'Everything you teach is fun! What shall we do next?',
+      letterToPet: '너처럼 똑똑하고 사랑스러운 고양이는 없을 거야. 나의 자랑.',
+      letterToPetEn: 'There\'s no cat as smart and lovely as you. My pride.'
+    }
   },
   'C-C_O-C': {
     petType: 'C-C',
@@ -888,7 +1138,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '고양이가 \'골골송\'을 부를 때, 보호자님도 낮은 목소리로 답가(대화)를 해보세요. 놀라운 교감을 경험할 수 있습니다.',
         contentEn: 'When cat \'purrs\', respond with low voice (conversation). You can experience amazing bonding.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '사랑이 넘치는 집사와 애교쟁이 고양이. 서로에게서 눈을 떼지 못하는 꿀 떨어지는 관계입니다.',
+      analysisEn: 'Love-filled butler and charmer cat. Sweet relationship unable to take eyes off each other.',
+      missions: ['하루 10분 안아주기', '사랑한다고 말하기', '골골송 녹음하기'],
+      missionsEn: ['Hug 10 mins daily', 'Say I love you', 'Record purring'],
+      letterToOwner: '주인님 품이 제일 따뜻해요. 평생 안아주세요.',
+      letterToOwnerEn: 'Your arms are warmest. Hug me forever.',
+      letterToPet: '너의 골골송은 나의 자장가야. 사랑해.',
+      letterToPetEn: 'Your purr is my lullaby. I love you.'
+    }
   },
   'C-C_O-L': {
     petType: 'C-C',
@@ -922,7 +1182,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '보호자님의 \'최애\' 의자나 소파 옆에 고양이가 올라오기 편하도록 \'스툴\'이나 \'계단\'을 놓아주는 것도 좋습니다.',
         contentEn: 'Good to place \'stool\' or \'steps\' beside your favorite chair or sofa for easy cat access.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '평화로운 일상을 공유하는 소울메이트. 함께 있는 것만으로도 힐링이 되는 따뜻한 관계입니다.',
+      analysisEn: 'Soulmates sharing peaceful daily life. Warm relationship where just being together is healing.',
+      missions: ['무릎냥이 타임 즐기기', '함께 창밖 구경하기', '조용한 음악 감상'],
+      missionsEn: ['Enjoy lap cat time', 'Watch window together', 'Listen to quiet music'],
+      letterToOwner: '주인님 무릎은 내 지정석이에요. 다른 고양이는 안 돼요!',
+      letterToOwnerEn: 'Your lap is my reserved seat. No other cats allowed!',
+      letterToPet: '네가 무릎에 올라오면 나는 움직일 수가 없어. 그래도 좋아.',
+      letterToPetEn: 'I can\'t move when you\'re on my lap. But I like it.'
+    }
   },
   'C-C_O-P': {
     petType: 'C-C',
@@ -956,7 +1226,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '"혹시 분리불안은 아닐까?" "관심을 너무 요구하는데... 외로운가?" 걱정보다는 \'현재의 애정표현\'에 집중해 주세요!',
         contentEn: '"Is it separation anxiety?" "Seeking too much attention... lonely?" Focus on \'current affection expression\' rather than worries!'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '애교 많은 고양이를 보며 행복해하면서도, 혹시나 아플까 걱정하는 부모님. 사랑이 깊은 만큼 걱정도 깊어요.',
+      analysisEn: 'Parent happy with affectionate cat but worried if sick. Worry is as deep as love.',
+      missions: ['건강 일기 작성', '정기적인 스킨십 체크', '영양제 급여'],
+      missionsEn: ['Write health diary', 'Regular touch check', 'Give supplements'],
+      letterToOwner: '주인님, 걱정 마세요. 저는 건강하고 행복해요!',
+      letterToOwnerEn: 'Don\'t worry. I\'m healthy and happy!',
+      letterToPet: '너무 예뻐서 닳을까 봐 걱정돼. 아프지 말고 건강하자.',
+      letterToPetEn: 'Worried you might wear out cause you\'re so pretty. Stay healthy.'
+    }
   },
   'C-N_O-T': {
     petType: 'C-N',
@@ -990,7 +1270,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '낚싯대 장난감을 \'멀리서\' 흔들어주며 고양이가 스스로 다가오도록 유도해 보세요.',
         contentEn: 'Wave wand toy \'from distance\' to encourage cat to approach on own.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '조용한 닌자 고양이와 인내심 강한 훈련사님. 서두르지 않고 천천히 다가가는 모습이 아름답습니다.',
+      analysisEn: 'Quiet ninja cat and patient trainer. Beautiful approach without rushing.',
+      missions: ['멀리서 눈인사하기', '간식 던져주고 모른 척하기', '이름 부르고 기다리기'],
+      missionsEn: ['Eye greet from afar', 'Toss treat and ignore', 'Call name and wait'],
+      letterToOwner: '기다려줘서 고마워요. 언젠가는 내가 먼저 다갈게요.',
+      letterToOwnerEn: 'Thanks for waiting. Someday I\'ll approach first.',
+      letterToPet: '네가 마음을 열 때까지 언제까지나 기다릴게.',
+      letterToPetEn: 'I\'ll wait forever until you open your heart.'
+    }
   },
   'C-N_O-C': {
     petType: 'C-N',
@@ -1024,7 +1314,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '억지로 안거나 만지려 하면 닌자는 더 깊이 숨어버립니다. 보호자님의 애정 표현은 \'눈 깜빡이기\'로 대신해 주세요.',
         contentEn: 'Forcing hold or touch makes ninja hide deeper. Express your affection with \'slow blinks\' instead.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '숨바꼭질의 달인과 술래의 만남. 얼굴 보기 힘들어도 사랑하는 마음은 통하고 있어요.',
+      analysisEn: 'Hide-and-seek master meets tagger. Love connects even if hard to see face.',
+      missions: ['숨은 고양이 찾기(눈으로만)', '숨숨집에 간식 배달', '조용히 사랑한다고 말하기'],
+      missionsEn: ['Find hidden cat (eyes only)', 'Deliver treats to hiding spot', 'Whisper I love you'],
+      letterToOwner: '나 여기 있어요. 마음으로 다 보고 있어요.',
+      letterToOwnerEn: 'I\'m here. Watching everything with my heart.',
+      letterToPet: '어디에 있든 너를 사랑해. 밥만 잘 먹어줘.',
+      letterToPetEn: 'Love you wherever you are. Just eat well.'
+    }
   },
   'C-N_O-L': {
     petType: 'C-N',
@@ -1058,7 +1358,17 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '닌자가 숨을 수 있는 \'숨숨집\'이나 \'박스\'를 집안 곳곳에 마련해 주세요.',
         contentEn: 'Prepare \'hiding houses\' or \'boxes\' throughout home for ninja to hide.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '서로의 영역을 존중하는 쿨한 룸메이트. 각자의 시간을 즐기며 조용히 공존하는 평화로운 관계입니다.',
+      analysisEn: 'Cool roommates respecting territories. Peaceful relationship enjoying own time and quietly coexisting.',
+      missions: ['같은 공간에서 따로 놀기', '서로의 낮잠 존중하기', '가끔 눈 마주치면 깜빡이기'],
+      missionsEn: ['Play separately in same room', 'Respect naps', 'Blink when eyes meet'],
+      letterToOwner: '당신은 좋은 룸메이트예요. 조용해서 마음에 들어요.',
+      letterToOwnerEn: 'You are a good roommate. I like that you\'re quiet.',
+      letterToPet: '너의 고요함이 나에게 평화를 줘. 고마워.',
+      letterToPetEn: 'Your silence gives me peace. Thank you.'
+    }
   },
   'C-N_O-P': {
     petType: 'C-N',
@@ -1092,19 +1402,29 @@ const catCompatibility: Record<string, CompatibilityResult> = {
         content: '건강검진을 위한 \'이동장 훈련\'이 필수입니다. 이동장을 \'숨숨집\'처럼 편안하게 느낄 수 있도록 평소에 열어두세요.',
         contentEn: '\'Carrier training\' for health checkups is essential. Keep carrier open normally so cat feels it\'s comfortable like \'hiding house\'.'
       }
-    ]
+    ],
+    detailReport: {
+      analysis: '아픈 티를 안 내는 고양이와 그걸 찾아내는 명탐정 보호자님. 닌자의 건강을 지키는 완벽한 수호자입니다.',
+      analysisEn: 'Cat hiding illness and detective guardian finding it. Perfect guardian protecting ninja\'s health.',
+      missions: ['매일 감자/맛동산 체크', '음수량 기록하기', '체중 변화 그래프 그리기'],
+      missionsEn: ['Daily litter check', 'Record water intake', 'Graph weight changes'],
+      letterToOwner: '귀찮게 좀 하지 마... 그래도 챙겨줘서 고마워.',
+      letterToOwnerEn: 'Don\'t bother me... but thanks for caring.',
+      letterToPet: '네가 건강한 게 나의 행복이야. 아프면 제발 티 좀 내줘.',
+      letterToPetEn: 'Your health is my happiness. Please show if you\'re sick.'
+    }
   }
 };
 
 // 궁합 결과 가져오기
 export function getCompatibility(petType: PetType, ownerType: OwnerType): CompatibilityResult | undefined {
   const key = `${petType}_${ownerType}`;
-  
+
   if (petType.startsWith('D-')) {
     return dogCompatibility[key];
   } else if (petType.startsWith('C-')) {
     return catCompatibility[key];
   }
-  
+
   return undefined;
 }

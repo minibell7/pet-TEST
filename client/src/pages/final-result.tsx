@@ -264,6 +264,15 @@ export default function FinalResult() {
           </div>
         </div>
 
+        <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+          <Button
+            className="w-full h-14 text-lg rounded-xl shadow-lg bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white"
+            onClick={() => setLocation('/compatibility-detail')}
+          >
+            📄 {language === 'ko' ? '상세 리포트 보기 (무료)' : 'View Detailed Report (Free)'}
+          </Button>
+        </div>
+
         {compatibility.tips && compatibility.tips.length > 0 && (
           <Card className="bg-card border-card-border">
             <CardContent className="p-6 space-y-4">

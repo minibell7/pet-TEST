@@ -20,7 +20,8 @@ export const dogTypes: Record<string, TypeInfo> = {
       'Walks are adventures! Must sniff everything',
       'Endless passion for new things',
       'Might be tiring, but makes the world so much fun'
-    ]
+    ],
+    stats: { energy: 10, affection: 8, independence: 6, curiosity: 10, calmness: 2 }
   },
   'D-F': {
     id: 'D-F',
@@ -40,7 +41,8 @@ export const dogTypes: Record<string, TypeInfo> = {
       '99% success rate with puppy eyes',
       'Always appears where food is',
       'Loyal and genuinely loves their owner'
-    ]
+    ],
+    stats: { energy: 6, affection: 9, independence: 4, curiosity: 8, calmness: 5 }
   },
   'D-Z': {
     id: 'D-Z',
@@ -60,7 +62,8 @@ export const dogTypes: Record<string, TypeInfo> = {
       'Doesn\'t waste unnecessary energy',
       'Enjoys quietly observing',
       'Loves peaceful daily life'
-    ]
+    ],
+    stats: { energy: 2, affection: 6, independence: 8, curiosity: 4, calmness: 10 }
   },
   'D-S': {
     id: 'D-S',
@@ -80,7 +83,8 @@ export const dogTypes: Record<string, TypeInfo> = {
       'Natural charmer',
       'Loves physical affection with owner',
       'Full of bright and positive energy'
-    ]
+    ],
+    stats: { energy: 8, affection: 10, independence: 2, curiosity: 7, calmness: 3 }
   }
 };
 
@@ -104,7 +108,8 @@ export const catTypes: Record<string, TypeInfo> = {
       'Looks down on everything with leisure',
       'Shows love with slow blinks',
       'Only seeks human when wanting attention'
-    ]
+    ],
+    stats: { energy: 5, affection: 4, independence: 10, curiosity: 6, calmness: 8 }
   },
   'C-G': {
     id: 'C-G',
@@ -124,7 +129,8 @@ export const catTypes: Record<string, TypeInfo> = {
       'Zoomies are essential! 3 AM sprint sessions',
       'Everything can be a toy',
       'Loses all control over Churu treats'
-    ]
+    ],
+    stats: { energy: 10, affection: 5, independence: 7, curiosity: 10, calmness: 1 }
   },
   'C-C': {
     id: 'C-C',
@@ -144,7 +150,8 @@ export const catTypes: Record<string, TypeInfo> = {
       'Always stays by human\'s side',
       'Kneading and purring come standard',
       'Dog-like cat that comes when called'
-    ]
+    ],
+    stats: { energy: 6, affection: 10, independence: 3, curiosity: 7, calmness: 5 }
   },
   'C-N': {
     id: 'C-N',
@@ -164,7 +171,8 @@ export const catTypes: Record<string, TypeInfo> = {
       'Quiet and independent personality',
       'Strangers are scary',
       'Values alone time'
-    ]
+    ],
+    stats: { energy: 3, affection: 3, independence: 10, curiosity: 5, calmness: 9 }
   }
 };
 
@@ -188,7 +196,8 @@ export const ownerTypes: Record<string, TypeInfo> = {
       'Enjoys exercising and activities together',
       'Finds fulfillment in pet\'s growth',
       'Believes rules are important'
-    ]
+    ],
+    stats: { energy: 9, affection: 7, independence: 8, curiosity: 8, calmness: 6 }
   },
   'O-C': {
     id: 'O-C',
@@ -208,7 +217,8 @@ export const ownerTypes: Record<string, TypeInfo> = {
       '90% of phone gallery is their baby',
       'Unconditional love and affection',
       'Everything is forgiven if cute'
-    ]
+    ],
+    stats: { energy: 7, affection: 10, independence: 2, curiosity: 6, calmness: 5 }
   },
   'O-L': {
     id: 'O-L',
@@ -228,7 +238,8 @@ export const ownerTypes: Record<string, TypeInfo> = {
       'Happy without anything special',
       'Comforted by each other\'s presence',
       'Relaxed and stress-free relationship'
-    ]
+    ],
+    stats: { energy: 3, affection: 8, independence: 7, curiosity: 4, calmness: 10 }
   },
   'O-P': {
     id: 'O-P',
@@ -248,7 +259,8 @@ export const ownerTypes: Record<string, TypeInfo> = {
       'Carefully analyzes food ingredients',
       'Sensitive to even small changes',
       'Dedicated care and management'
-    ]
+    ],
+    stats: { energy: 5, affection: 9, independence: 4, curiosity: 9, calmness: 4 }
   }
 };
 

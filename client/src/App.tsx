@@ -22,13 +22,13 @@ import DailyFortune from "@/pages/daily-fortune";
 import AgeCalculatorPage from "@/pages/age-calculator-page";
 import NotFound from "@/pages/not-found";
 
+import CompatibilityDetail from "@/pages/compatibility-detail";
+
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/pet-bti" component={PetBTIIntro} />
-      <Route path="/feed-calculator" component={FeedCalculator} />
-      <Route path="/pet-translator" component={PetTranslator} />
       <Route path="/pet-info" component={PetInfo} />
       <Route path="/dog-quiz" component={DogQuiz} />
       <Route path="/cat-quiz" component={CatQuiz} />
@@ -38,8 +38,11 @@ function Router() {
       <Route path="/owner-result" component={OwnerResult} />
       <Route path="/loading" component={Loading} />
       <Route path="/final-result" component={FinalResult} />
+      <Route path="/compatibility-detail" component={CompatibilityDetail} />
       <Route path="/daily-fortune" component={DailyFortune} />
       <Route path="/age-calculator" component={AgeCalculatorPage} />
+      <Route path="/feed-calculator" component={FeedCalculator} />
+      <Route path="/pet-translator" component={PetTranslator} />
       <Route component={NotFound} />
     </Switch>
   );
