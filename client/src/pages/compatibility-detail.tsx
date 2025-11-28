@@ -14,11 +14,35 @@ import {
     ResponsiveContainer,
     Legend
 } from 'recharts';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useTheme } from '@/components/theme-provider';
 
 export default function CompatibilityDetail() {
     const [, setLocation] = useLocation();
     const { t, language } = useI18n();
+    const { theme } = useTheme();
+
+    const [isDark, setIsDark] = useState(false);
+
+    useEffect(() => {
+        const checkTheme = () => {
+            if (theme === 'system') {
+                setIsDark(window.matchMedia('(prefers-color-scheme: dark)').matches);
+            } else {
+                setIsDark(theme === 'dark');
+            }
+        };
+
+        checkTheme();
+
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const handleChange = () => {
+            if (theme === 'system') checkTheme();
+        };
+
+        mediaQuery.addEventListener('change', handleChange);
+        return () => mediaQuery.removeEventListener('change', handleChange);
+    }, [theme]);
 
     const petResult = storage.getState().petResult;
     const ownerResult = storage.getState().ownerResult;
@@ -74,10 +98,16 @@ export default function CompatibilityDetail() {
 
     const { detailReport } = compatibility;
 
+    // Chart colors based on theme
+    const gridColor = isDark ? "#4b5563" : "#e5e7eb";
+    const textColor = isDark ? "#9ca3af" : "#6b7280";
+    const petColor = "#FF6B6B";
+    const ownerColor = "#4ECDC4";
+
     return (
         <div className="min-h-screen bg-background pb-20">
             {/* Header */}
-            <header className="bg-primary/5 p-4 sticky top-0 z-10 backdrop-blur-sm bg-white/30 border-b border-border/10">
+            <header className="bg-primary/5 p-4 sticky top-0 z-10 backdrop-blur-sm bg-white/30 dark:bg-black/30 border-b border-border/10">
                 <div className="max-w-2xl mx-auto flex items-center justify-between">
                     <Button
                         variant="ghost"
@@ -107,7 +137,7 @@ export default function CompatibilityDetail() {
                 </div>
 
                 {/* Radar Chart Section */}
-                <Card className="border-none shadow-lg bg-white/50 backdrop-blur-sm">
+                <Card className="border-none shadow-lg bg-white/50 dark:bg-card/50 backdrop-blur-sm">
                     <CardHeader>
                         <CardTitle className="text-center text-lg">
                             {language === 'ko' ? '성향 분석 그래프' : 'Personality Radar Chart'}
@@ -116,21 +146,21 @@ export default function CompatibilityDetail() {
                     <CardContent className="h-[300px] w-full">
                         <ResponsiveContainer width="100%" height="100%">
                             <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-                                <PolarGrid stroke="#e5e7eb" />
-                                <PolarAngleAxis dataKey="subject" tick={{ fill: '#6b7280', fontSize: 12 }} />
+                                <PolarGrid stroke={gridColor} />
+                                <PolarAngleAxis dataKey="subject" tick={{ fill: textColor, fontSize: 12 }} />
                                 <PolarRadiusAxis angle={30} domain={[0, 10]} tick={false} axisLine={false} />
                                 <Radar
                                     name={language === 'ko' ? '반려동물' : 'Pet'}
                                     dataKey="A"
-                                    stroke="#FF6B6B"
-                                    fill="#FF6B6B"
+                                    stroke={petColor}
+                                    fill={petColor}
                                     fillOpacity={0.4}
                                 />
                                 <Radar
                                     name={language === 'ko' ? '보호자' : 'Owner'}
                                     dataKey="B"
-                                    stroke="#4ECDC4"
-                                    fill="#4ECDC4"
+                                    stroke={ownerColor}
+                                    fill={ownerColor}
                                     fillOpacity={0.4}
                                 />
                                 <Legend />
@@ -144,7 +174,7 @@ export default function CompatibilityDetail() {
 
                 {/* Deep Dive Analysis */}
                 <div className="space-y-6">
-                    <div className="bg-primary/5 p-6 rounded-2xl border border-primary/10">
+                    <div className="bg-primary/5 dark:bg-primary/10 p-6 rounded-2xl border border-primary/10">
                         <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
                             🔍 {language === 'ko' ? '심층 분석' : 'Deep Dive Analysis'}
                         </h3>
@@ -160,7 +190,7 @@ export default function CompatibilityDetail() {
                         </h3>
                         <div className="grid gap-3">
                             {(language === 'ko' ? detailReport.missions : detailReport.missionsEn).map((mission, idx) => (
-                                <div key={idx} className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm border border-border/40">
+                                <div key={idx} className="flex items-center gap-3 bg-white dark:bg-card p-4 rounded-xl shadow-sm border border-border/40">
                                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-sm font-bold">
                                         {idx + 1}
                                     </span>
@@ -177,23 +207,23 @@ export default function CompatibilityDetail() {
                         </h3>
 
                         {/* Letter from Pet */}
-                        <div className="relative bg-[#FFF9C4] p-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl shadow-md ml-4 mr-8 transform -rotate-1">
+                        <div className="relative bg-[#FFF9C4] dark:bg-yellow-900/40 p-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl shadow-md ml-4 mr-8 transform -rotate-1 border border-yellow-200/50 dark:border-yellow-700/30">
                             <div className="absolute -top-3 -left-3 text-4xl">🐾</div>
-                            <p className="font-handwriting text-lg leading-relaxed text-slate-800">
+                            <p className="font-handwriting text-lg leading-relaxed text-slate-800 dark:text-slate-200">
                                 "{language === 'ko' ? detailReport.letterToOwner : detailReport.letterToOwnerEn}"
                             </p>
-                            <p className="text-right text-sm text-slate-500 mt-2 font-bold">
+                            <p className="text-right text-sm text-slate-500 dark:text-slate-400 mt-2 font-bold">
                                 - {language === 'ko' ? '반려동물이' : 'From Pet'} -
                             </p>
                         </div>
 
                         {/* Letter from Owner */}
-                        <div className="relative bg-[#E3F2FD] p-6 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl shadow-md ml-8 mr-4 transform rotate-1">
+                        <div className="relative bg-[#E3F2FD] dark:bg-blue-900/40 p-6 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl shadow-md ml-8 mr-4 transform rotate-1 border border-blue-200/50 dark:border-blue-700/30">
                             <div className="absolute -top-3 -right-3 text-4xl">🧑‍🤝‍🧑</div>
-                            <p className="font-handwriting text-lg leading-relaxed text-slate-800">
+                            <p className="font-handwriting text-lg leading-relaxed text-slate-800 dark:text-slate-200">
                                 "{language === 'ko' ? detailReport.letterToPet : detailReport.letterToPetEn}"
                             </p>
-                            <p className="text-right text-sm text-slate-500 mt-2 font-bold">
+                            <p className="text-right text-sm text-slate-500 dark:text-slate-400 mt-2 font-bold">
                                 - {language === 'ko' ? '보호자가' : 'From Owner'} -
                             </p>
                         </div>
