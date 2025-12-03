@@ -6,7 +6,7 @@ export const dogTypes: Record<string, TypeInfo> = {
     id: 'D-E',
     name: '활발한 탐험가',
     nameEn: 'Active Explorer',
-    emoji: '🏃‍♂️',
+    emoji: '🐕',
     description: '세상은 넓고 탐험할 곳은 너무 많아!',
     descriptionEn: 'The world is wide and there\'s so much to explore!',
     traits: [
@@ -69,7 +69,7 @@ export const dogTypes: Record<string, TypeInfo> = {
     id: 'D-S',
     name: '사교적인 댕청이',
     nameEn: 'Social Butterfly',
-    emoji: '🥰',
+    emoji: '🐶',
     description: '날 봐! 날 예뻐해 줘! 세상 모든 사람이 날 사랑해!',
     descriptionEn: 'Look at me! Love me! Everyone loves me!',
     traits: [
@@ -157,7 +157,7 @@ export const catTypes: Record<string, TypeInfo> = {
     id: 'C-N',
     name: '공허의 닌자',
     nameEn: 'Shadow Ninja',
-    emoji: '🥷',
+    emoji: '🐈‍⬛',
     description: '분명 여기 있었는데... 없습니다. (은신술)',
     descriptionEn: 'They were just here... gone. (Stealth mode)',
     traits: [
