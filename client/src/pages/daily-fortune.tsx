@@ -12,7 +12,7 @@ import {
 import { storage } from '@/lib/storage';
 import { getDailyFortune } from '@/data/fortuneData';
 import { getTypeInfo } from '@/data/typeInfo';
-import { ArrowLeft, Sparkles, RefreshCw } from 'lucide-react';
+import { ArrowLeft, Sparkles, RefreshCw, Star, Gift } from 'lucide-react';
 import { useI18n } from '@/lib/i18n';
 import { LanguageToggle } from '@/components/language-toggle';
 import type { PetType, OwnerType } from '@shared/schema';
@@ -44,37 +44,43 @@ export default function DailyFortune() {
     setLocation('/');
   };
 
-  const handleViewFortune = () => {
-    if (selectedPetType && selectedOwnerType) {
-      setShowFortune(true);
-    }
-  };
-
   const today = new Date();
-  const dateString = today.toLocaleDateString(language === 'ko' ? 'ko-KR' : 'en-US', { 
+  const dateString = today.toLocaleDateString(language === 'ko' ? 'ko-KR' : 'en-US', {
     year: 'numeric',
-    month: 'long', 
+    month: 'long',
     day: 'numeric',
     weekday: 'long'
   });
 
+  // Random Lucky Item Generator (Simple implementation)
+  const getLuckyItem = () => {
+    const items = language === 'ko'
+      ? ['간식', '산책', '장난감', '새 옷', '포옹', '낮잠']
+      : ['Treat', 'Walk', 'Toy', 'New Outfit', 'Hug', 'Nap'];
+    const colors = language === 'ko'
+      ? ['빨강', '파랑', '노랑', '초록', '보라', '핑크']
+      : ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Pink'];
+
+    const randomItem = items[today.getDate() % items.length];
+    const randomColor = colors[today.getDay() % colors.length];
+
+    return { item: randomItem, color: randomColor };
+  };
+
+  const lucky = getLuckyItem();
+
   return (
-    <div className="min-h-screen bg-background px-4 py-8 md:py-12">
+    <div className="min-h-screen px-4 py-8 md:py-12">
       <div className="max-w-3xl w-full mx-auto space-y-8">
         <div className="flex items-center justify-between mb-4">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={handleBack}
-            data-testid="button-back"
-          >
+          <Button variant="ghost" size="icon" onClick={handleBack}>
             <ArrowLeft className="w-6 h-6" />
           </Button>
           <LanguageToggle />
         </div>
 
         <div className="text-center space-y-4">
-          <div className="text-6xl md:text-8xl">🔮</div>
+          <div className="text-6xl md:text-8xl animate-bounce">🔮</div>
           <h1 className="text-3xl md:text-4xl font-bold text-foreground">
             {t('dailyFortune.title')}
           </h1>
@@ -84,55 +90,42 @@ export default function DailyFortune() {
         </div>
 
         {!showFortune ? (
-          <Card>
+          <Card className="glass-panel border-white/20">
             <CardHeader>
               <h3 className="text-xl font-bold text-center">
                 {t('dailyFortune.selectTypes')}
               </h3>
-              <p className="text-sm text-muted-foreground text-center">
-                {t('dailyFortune.selectTypesDesc')}
-              </p>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="space-y-2">
-                <label className="text-sm font-medium">
-                  {t('dailyFortune.petType')}
-                </label>
+              <div className="grid gap-4">
                 <Select value={selectedPetType || ''} onValueChange={(value) => setSelectedPetType(value as PetType)}>
-                  <SelectTrigger data-testid="select-pet-type">
-                    <SelectValue placeholder={t('dailyFortune.selectPlaceholder')} />
+                  <SelectTrigger className="h-12">
+                    <SelectValue placeholder={t('dailyFortune.petType')} />
                   </SelectTrigger>
                   <SelectContent>
                     {PET_TYPES.map((type) => {
                       const info = getTypeInfo(type);
                       if (!info) return null;
-                      const name = language === 'en' && info.nameEn ? info.nameEn : info.name;
                       return (
                         <SelectItem key={type} value={type}>
-                          {info.emoji} {name} ({type})
+                          {info.emoji} {language === 'en' ? info.nameEn : info.name}
                         </SelectItem>
                       );
                     })}
                   </SelectContent>
                 </Select>
-              </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium">
-                  {t('dailyFortune.ownerType')}
-                </label>
                 <Select value={selectedOwnerType || ''} onValueChange={(value) => setSelectedOwnerType(value as OwnerType)}>
-                  <SelectTrigger data-testid="select-owner-type">
-                    <SelectValue placeholder={t('dailyFortune.selectPlaceholder')} />
+                  <SelectTrigger className="h-12">
+                    <SelectValue placeholder={t('dailyFortune.ownerType')} />
                   </SelectTrigger>
                   <SelectContent>
                     {OWNER_TYPES.map((type) => {
                       const info = getTypeInfo(type);
                       if (!info) return null;
-                      const name = language === 'en' && info.nameEn ? info.nameEn : info.name;
                       return (
                         <SelectItem key={type} value={type}>
-                          {info.emoji} {name} ({type})
+                          {info.emoji} {language === 'en' ? info.nameEn : info.name}
                         </SelectItem>
                       );
                     })}
@@ -141,85 +134,77 @@ export default function DailyFortune() {
               </div>
 
               <Button
-                variant="default"
                 size="lg"
-                onClick={handleViewFortune}
+                onClick={() => setShowFortune(true)}
                 disabled={!selectedPetType || !selectedOwnerType}
-                className="w-full"
-                data-testid="button-view-fortune"
+                className="w-full rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 hover:opacity-90"
               >
                 {t('dailyFortune.viewFortune')}
               </Button>
             </CardContent>
           </Card>
         ) : (
-          <>
-            {petName && ownerName && (
-              <p className="text-center text-sm text-muted-foreground">
-                {petName} & {ownerName}
-              </p>
-            )}
-
-            <Card className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 border-purple-200 dark:border-purple-800">
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <Sparkles className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                    <h3 className="text-xl font-bold text-card-foreground">
-                      {t('dailyFortune.eightFortunes')}
-                    </h3>
+          <div className="space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
+            {/* Lucky Item Card */}
+            <Card className="bg-gradient-to-r from-yellow-100 to-orange-100 dark:from-yellow-900/30 dark:to-orange-900/30 border-yellow-200">
+              <CardContent className="p-6 flex items-center justify-around text-center">
+                <div>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wider font-bold mb-1">Lucky Item</p>
+                  <div className="text-2xl font-bold text-orange-600 dark:text-orange-400 flex items-center gap-2">
+                    <Gift className="w-6 h-6" /> {lucky.item}
                   </div>
-                  <Button 
-                    variant="ghost" 
-                    size="icon"
-                    onClick={() => setShowFortune(false)}
-                    data-testid="button-change-types"
-                  >
-                    <RefreshCw className="w-5 h-5" />
-                  </Button>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {getDailyFortune(selectedPetType!, selectedOwnerType!).fortunes.map((fortuneItem, index) => {
-                    const category = language === 'en' ? fortuneItem.categoryEn : fortuneItem.category;
-                    const message = language === 'en' ? fortuneItem.messageEn : fortuneItem.message;
-                    
-                    return (
-                      <div 
-                        key={index} 
-                        className="bg-white/50 dark:bg-black/20 rounded-lg p-4 md:p-6 space-y-3 hover-elevate"
-                        data-testid={`fortune-card-${index}`}
-                      >
-                        <div className="flex items-center justify-between">
-                          <p className="font-bold text-lg text-card-foreground">
-                            {category}
-                          </p>
-                          <p className="text-xl">
-                            {'⭐'.repeat(fortuneItem.stars)}
-                          </p>
-                        </div>
-                        <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap">
-                          {message}
-                        </p>
-                      </div>
-                    );
-                  })}
+                <div className="w-px h-12 bg-yellow-300 dark:bg-yellow-700" />
+                <div>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wider font-bold mb-1">Lucky Color</p>
+                  <div className="text-2xl font-bold text-orange-600 dark:text-orange-400 flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-full border border-black/10 shadow-sm" style={{ backgroundColor: lucky.color.toLowerCase() }} />
+                    {lucky.color}
+                  </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="text-center p-6 bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-950/20 dark:to-orange-950/20 border-yellow-200 dark:border-yellow-800">
-              <p className="text-sm text-muted-foreground mb-4">
-                💡 {t('dailyFortune.updateDaily')}
-              </p>
-              <Link href="/">
-                <Button variant="outline" size="lg" className="w-full md:w-auto" data-testid="button-home">
-                  {t('dailyFortune.backToHome')}
-                </Button>
-              </Link>
-            </Card>
-          </>
+            <div className="grid grid-cols-1 gap-4">
+              {getDailyFortune(selectedPetType!, selectedOwnerType!).fortunes.map((fortuneItem, index) => {
+                const category = language === 'en' ? fortuneItem.categoryEn : fortuneItem.category;
+                const message = language === 'en' ? fortuneItem.messageEn : fortuneItem.message;
+
+                return (
+                  <Card
+                    key={index}
+                    className="glass-panel hover-elevate border-white/20 overflow-hidden relative"
+                  >
+                    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary to-secondary" />
+                    <CardContent className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <h3 className="font-bold text-lg text-primary flex items-center gap-2">
+                          {index === 0 ? '❤️' : index === 1 ? '💰' : index === 2 ? '💪' : '🤝'} {category}
+                        </h3>
+                        <div className="flex gap-0.5">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className={`w-4 h-4 ${i < fortuneItem.stars ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />
+                          ))}
+                        </div>
+                      </div>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {message}
+                      </p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+
+            <Button
+              variant="outline"
+              onClick={() => setShowFortune(false)}
+              className="w-full rounded-xl"
+            >
+              <RefreshCw className="w-4 h-4 mr-2" />
+              Check Another
+            </Button>
+          </div>
         )}
       </div>
     </div>
