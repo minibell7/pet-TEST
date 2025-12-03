@@ -4,92 +4,92 @@ import type { QuizQuestion, DogType, CatType, OwnerType } from '@shared/schema';
 export const dogQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "'[이름]'이가 \"산책!\"이라는 단어를 들었을 때?",
-    questionEn: "When [name] hears the word \"walk\"?",
+    question: "주방에서 '바스락' 봉지 뜯는 소리가 들렸을 때?",
+    questionEn: "When they hear a 'crinkle' sound from the kitchen?",
     options: [
-      { text: "미친 듯이 점프하며 현관으로 달려간다.", textEn: "Goes absolutely crazy, jumping and running to the door.", type: 'D-E' as DogType },
-      { text: "소파에서 꼬리만 살랑 흔든다.", textEn: "Just wags tail gently from the couch.", type: 'D-Z' as DogType }
+      { text: "자다가도 벌떡! 0.1초 만에 주방으로 순간이동한다.", textEn: "Teleports to the kitchen in 0.1 seconds.", type: 'D-F' as DogType },
+      { text: "귀만 쫑긋거리고, 진짜 맛있는 냄새가 날 때까지 기다린다.", textEn: "Just perks ears, waits for the real smell.", type: 'D-Z' as DogType }
     ]
   },
   {
     id: 2,
-    question: "'[이름]'이를 움직이는 최고의 보상은?",
-    questionEn: "The best reward to motivate [name]?",
+    question: "현관문 도어락 소리(또는 차고 문 소리)가 들릴 때?",
+    questionEn: "When they hear the garage door open?",
     options: [
-      { text: "\"까까\" 소리.", textEn: "The sound of treats.", type: 'D-F' as DogType },
-      { text: "폭풍 칭찬과 스킨십.", textEn: "Tons of praise and cuddles.", type: 'D-S' as DogType }
+      { text: "꼬리로 헬리콥터 이륙 준비! 현관 앞에서 탭댄스를 춘다.", textEn: "Helicopter tail ready for takeoff! Tap dancing at the door.", type: 'D-S' as DogType },
+      { text: "누가 왔나? 짖으면서 경계 태세로 문 앞을 지킨다.", textEn: "Barking to guard the door until identified.", type: 'D-E' as DogType }
     ]
   },
   {
     id: 3,
-    question: "집에 새로운 손님이 방문했을 때?",
-    questionEn: "When a new guest visits your home?",
+    question: "산책 중, 저 멀리 다른 강아지가 보일 때?",
+    questionEn: "Spotting another dog during a walk?",
     options: [
-      { text: "좋아서 어쩔 줄 모르며 달려들어 핥는다.", textEn: "Rushes over excitedly and starts licking them.", type: 'D-S' as DogType },
-      { text: "자기 구역에서 조용히 손님을 관찰한다.", textEn: "Quietly observes the guest from their own spot.", type: 'D-Z' as DogType }
+      { text: "\"친구다!!!\" 꼬리를 흔들며 인사하고 싶어서 난리 난다.", textEn: "\"New Friend!!!\" Pulls leash to go say hi.", type: 'D-S' as DogType },
+      { text: "내 갈 길 간다. 쿨하게 무시하고 전봇대 냄새에 집중한다.", textEn: "Ignores them. Focuses on sniffing the hydrant.", type: 'D-Z' as DogType }
     ]
   },
   {
     id: 4,
-    question: "'[이름]'이의 놀이 스타일은?",
-    questionEn: "[name]'s play style?",
+    question: "새 장난감(삑삑이)을 선물 받았을 때?",
+    questionEn: "Getting a new squeaky toy?",
     options: [
-      { text: "공, 원반 등 온몸으로 뛰어다니는 놀이.", textEn: "Active games like fetch and frisbee.", type: 'D-E' as DogType },
-      { text: "간식이 숨겨진 노즈워크 퍼즐 놀이.", textEn: "Nose work and puzzle games with hidden treats.", type: 'D-F' as DogType }
+      { text: "5분 안에 삑삑이 사망. 솜이 터져 나올 때까지 흔든다.", textEn: "Squeaker dead in 5 mins. Destroys it completely.", type: 'D-E' as DogType },
+      { text: "소중하게 물고 자기 집으로 가져가서 보물처럼 지킨다.", textEn: "Gently takes it to their bed and guards it.", type: 'D-F' as DogType }
     ]
   },
   {
     id: 5,
-    question: "주인이 집에 돌아왔을 때?",
-    questionEn: "When you come home?",
+    question: "주인이 슬픈 표정으로 한숨을 쉴 때?",
+    questionEn: "When you sigh with a sad face?",
     options: [
-      { text: "온몸으로 반가움을 표현하는 환영 파티를 연다.", textEn: "Throws a full-body welcome party.", type: 'D-S' as DogType },
-      { text: "꼬리를 흔들며 다가와 냄새를 맡는다.", textEn: "Approaches wagging tail and sniffing.", type: 'D-Z' as DogType }
+      { text: "조용히 다가와서 내 손이나 얼굴을 핥아준다.", textEn: "Quietly comes and licks your hand or face.", type: 'D-S' as DogType },
+      { text: "\"산책 가면 기분 풀릴걸?\" 목줄을 물어온다.", textEn: "Brings the leash. \"Walkies will fix it!\"", type: 'D-E' as DogType }
     ]
   },
   {
     id: 6,
-    question: "산책 중 '[이름]'이는 주로...",
-    questionEn: "During walks, [name] usually...",
+    question: "넓은 잔디밭(또는 공원)에 풀어줬을 때?",
+    questionEn: "Unleashed in a big dog park?",
     options: [
-      { text: "구석구석 모든 냄새를 맡느라 정신이 없다.", textEn: "Is busy sniffing every corner.", type: 'D-E' as DogType },
-      { text: "혹시 바닥에 떨어진 음식이 없나 살핀다.", textEn: "Looks for any dropped food on the ground.", type: 'D-F' as DogType }
+      { text: "우다다다! 보이지 않을 정도로 미친 듯이 뛰어다닌다.", textEn: "Zoomies! Runs around like a crazy rocket.", type: 'D-E' as DogType },
+      { text: "주인 다리 사이나 벤치 근처에서 맴돈다.", textEn: "Stays close to your legs or the bench.", type: 'D-Z' as DogType }
     ]
   },
   {
     id: 7,
-    question: "새 장난감을 사주었을 때 반응은?",
-    questionEn: "When you buy a new toy?",
+    question: "실수로 바닥에 맛있는 고기 한 점을 떨어뜨렸을 때!",
+    questionEn: "You accidentally drop a piece of bacon!",
     options: [
-      { text: "일단 물고 뜯고 흔들며 격하게 탐색한다.", textEn: "Immediately bites, tears, and shakes it intensely.", type: 'D-E' as DogType },
-      { text: "낯설어하며, 조심스럽게 냄새부터 맡는다.", textEn: "Feels cautious and carefully sniffs it first.", type: 'D-Z' as DogType }
+      { text: "바닥에 닿기도 전에 공중에서 낚아채 삼킨다. (진공청소기)", textEn: "Snaps it out of the air before it hits the floor.", type: 'D-F' as DogType },
+      { text: "\"먹어도 돼?\" 하는 눈빛으로 주인을 쳐다본다.", textEn: "Looks at you asking \"Can I eat this?\"", type: 'D-Z' as DogType }
     ]
   },
   {
     id: 8,
-    question: "'[이름]'이의 최고의 개인기는?",
-    questionEn: "[name]'s best talent?",
+    question: "낯선 사람(택배 기사님/우편 배달부)이 왔을 때?",
+    questionEn: "When the mailman/delivery person comes?",
     options: [
-      { text: "간식을 얻어내기 위한 아련한 눈빛 발사.", textEn: "Giving puppy eyes to get treats.", type: 'D-F' as DogType },
-      { text: "처음 보는 사람(이나 강아지)과도 금방 친해지기.", textEn: "Making friends instantly with anyone.", type: 'D-S' as DogType }
+      { text: "우리 집을 지켜야 해! 용맹하게 짖어서 쫓아낸다.", textEn: "Must protect the house! Barks bravely.", type: 'D-E' as DogType },
+      { text: "누구세요? 꼬리 흔들며 반갑다고 마중 나간다.", textEn: "Who's that? Wags tail and welcomes them.", type: 'D-S' as DogType }
     ]
   },
   {
     id: 9,
-    question: "밥 먹는 시간!",
-    questionEn: "Meal time!",
+    question: "밥그릇에 사료가 가득 차 있을 때?",
+    questionEn: "When the food bowl is full?",
     options: [
-      { text: "10초 만에 그릇 바닥까지 핥아 먹는다.", textEn: "Finishes the bowl in 10 seconds.", type: 'D-F' as DogType },
-      { text: "주변을 한번 쓱 둘러보고 천천히 먹는다.", textEn: "Looks around first, then eats slowly.", type: 'D-Z' as DogType }
+      { text: "숨도 안 쉬고 흡입한다. 설거지까지 완벽하게.", textEn: "Inhales it without breathing. Licks bowl clean.", type: 'D-F' as DogType },
+      { text: "한두 알 물고 가서 뱉어놓고, 나중에 심심하면 먹는다.", textEn: "Takes one bite, spits it out, eats later.", type: 'D-Z' as DogType }
     ]
   },
   {
     id: 10,
-    question: "'[이름]'이가 집에서 가장 좋아하는 장소는?",
-    questionEn: "[name]'s favorite spot at home?",
+    question: "주인이 화장실에 들어갔을 때?",
+    questionEn: "When you go to the bathroom?",
     options: [
-      { text: "주인 무릎 위, 또는 주인이 가장 잘 보이는 곳.", textEn: "On your lap, or where they can see you best.", type: 'D-S' as DogType },
-      { text: "창밖이나 현관문 쪽이 잘 보이는 창가/현관.", textEn: "By the window or door to watch outside.", type: 'D-E' as DogType }
+      { text: "문 긁고 낑낑거린다. \"나만 두고 어디 갔어!\"", textEn: "Scratches door. \"Don't leave me alone!\"", type: 'D-S' as DogType },
+      { text: "문 앞에서 엎드려 기다리거나, 자기 할 일 하러 간다.", textEn: "Lays by the door or goes to do their own thing.", type: 'D-Z' as DogType }
     ]
   }
 ];
@@ -98,92 +98,92 @@ export const dogQuestions: QuizQuestion[] = [
 export const catQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "'[이름]'이에게 사냥놀이(깃털 장난감)를 흔들어주면?",
-    questionEn: "When you wave a feather toy for [name]?",
+    question: "새벽 3시, 온 집안이 고요할 때...",
+    questionEn: "3 AM, when the house is silent...",
     options: [
-      { text: "눈빛이 변하며 즉시 달려들어 사냥을 시작한다.", textEn: "Eyes change and immediately pounces into hunt mode.", type: 'C-G' as CatType },
-      { text: "꼬리만 까딱... 까딱... 하다가 가끔 솜방망이질을 한다.", textEn: "Just flicks tail... and occasionally gives gentle paws.", type: 'C-R' as CatType }
+      { text: "우다다 타임! 보이지 않는 적과 싸우며 뛰어다닌다.", textEn: "Zoomies! Fighting invisible demons everywhere.", type: 'C-G' as CatType },
+      { text: "집사 배 위나 다리 사이에서 꿀잠 자고 있다.", textEn: "Sleeping peacefully on your stomach.", type: 'C-C' as CatType }
     ]
   },
   {
     id: 2,
-    question: "집사가 집에 돌아왔을 때 '[이름]'이는?",
-    questionEn: "When you come home, [name]...",
+    question: "비싼 캣타워 vs. 방금 온 택배 박스",
+    questionEn: "Expensive Cat Tower vs. Cardboard Box",
     options: [
-      { text: "현관문 앞에서 기다렸다는 듯이 다리에 몸을 비빈다.", textEn: "Waits at the door and rubs against your legs.", type: 'C-C' as CatType },
-      { text: "캣타워 제일 높은 곳에서 나를 내려다본다.", textEn: "Looks down at you from the top of the cat tower.", type: 'C-R' as CatType }
+      { text: "박스 최고! 좁아터져도 일단 몸을 구겨 넣는다.", textEn: "Box is life! Squeezes in no matter how small.", type: 'C-G' as CatType },
+      { text: "캣타워 꼭대기에서 집사를 내려다보며 군림한다.", textEn: "Judges you from the top of the tower.", type: 'C-R' as CatType }
     ]
   },
   {
     id: 3,
-    question: "비싼 새 침대 vs. 방금 온 택배 박스",
-    questionEn: "Expensive new bed vs. Delivery box",
+    question: "집사가 컴퓨터(노트북) 작업을 시작하면?",
+    questionEn: "When you start working on your laptop?",
     options: [
-      { text: "당연히 박스! 일단 들어가고 본다.", textEn: "Obviously the box! Gets in immediately.", type: 'C-G' as CatType },
-      { text: "푹신한 새 침대를 꾹꾹이로 테스트해 본다.", textEn: "Tests the soft new bed with kneading.", type: 'C-C' as CatType }
+      { text: "키보드 위에 눕거나 모니터 앞을 가로막는다. \"나만 봐.\"", textEn: "Sits on keyboard. \"Pay attention to me.\"", type: 'C-C' as CatType },
+      { text: "책상 구석이나 의자 뒤에서 조용히 지켜본다.", textEn: "Watches quietly from the corner.", type: 'C-N' as CatType }
     ]
   },
   {
     id: 4,
-    question: "'[이름]'이와 눈이 마주쳤을 때?",
-    questionEn: "When you make eye contact with [name]?",
+    question: "창밖으로 새나 벌레가 지나갈 때?",
+    questionEn: "Seeing a bird or bug outside the window?",
     options: [
-      { text: "눈을 천천히 깜빡여준다.", textEn: "Slowly blinks back at you.", type: 'C-R' as CatType },
-      { text: "시선을 피하거나 다른 곳으로 숨어버린다.", textEn: "Looks away or hides somewhere else.", type: 'C-N' as CatType }
+      { text: "\"깍깍!\" 채터링을 하며 사냥 본능을 불태운다.", textEn: "\"Ek ek ek!\" Chatters with hunting instinct.", type: 'C-G' as CatType },
+      { text: "귀찮다는 듯 눈만 끔뻑이고 다시 잔다.", textEn: "Blinks once and goes back to sleep.", type: 'C-R' as CatType }
     ]
   },
   {
     id: 5,
-    question: "새벽 3시, '[이름]'이는 주로 무엇을 하나요?",
-    questionEn: "At 3 AM, [name] usually...",
+    question: "낯선 손님이 집에 들어왔을 때?",
+    questionEn: "When a stranger enters the house?",
     options: [
-      { text: "집안을 미친 듯이 뛰어다닌다. (우다다 타임)", textEn: "Runs around the house like crazy. (Zoomies time)", type: 'C-G' as CatType },
-      { text: "집사 팔베개를 하고 같이 자고 있다.", textEn: "Sleeps on your arm as a pillow.", type: 'C-C' as CatType }
+      { text: "침대 밑, 옷장 위 등 블랙홀로 사라진다. (못 찾음)", textEn: "Vanishes into the void (Under bed/closet).", type: 'C-N' as CatType },
+      { text: "누구냐? 냄새 맡으며 다리 사이로 쓱 지나간다.", textEn: "Sniffs them and rubs against their legs.", type: 'C-C' as CatType }
     ]
   },
   {
     id: 6,
-    question: "'[이름]'이가 가장 좋아하는 것은?",
-    questionEn: "[name]'s favorite thing?",
+    question: "집사가 화장실 청소를 하거나 물건을 옮길 때?",
+    questionEn: "When you clean or move furniture?",
     options: [
-      { text: "츄르! (이성을 잃는다)", textEn: "Churu treats! (Loses all self-control)", type: 'C-G' as CatType },
-      { text: "집사의 무릎 (골골송은 기본 옵션)", textEn: "Your lap (purring included)", type: 'C-C' as CatType }
+      { text: "졸졸 따라다니며 참견하고 방해한다.", textEn: "Follows you everywhere and interferes.", type: 'C-G' as CatType },
+      { text: "높은 곳에서 \"잘하고 있군\" 감시만 한다.", textEn: "Supervises from a high spot.", type: 'C-R' as CatType }
     ]
   },
   {
     id: 7,
-    question: "낯선 손님이 집에 방문했을 때?",
-    questionEn: "When a stranger visits?",
+    question: "츄르(간식) 봉지를 꺼내 들었을 때?",
+    questionEn: "When you grab the Churu/Treat bag?",
     options: [
-      { text: "침대 밑이나 옷장 속에 완벽하게 숨는다.", textEn: "Hides perfectly under the bed or in the closet.", type: 'C-N' as CatType },
-      { text: "호기심을 보이며, 적당한 거리에서 손님을 관찰한다.", textEn: "Shows curiosity and observes from a safe distance.", type: 'C-R' as CatType }
+      { text: "야옹! 야옹! 빨리 내놔라! (목소리가 3옥타브 올라감)", textEn: "Meow! Meow! Give it now! (Voice gets high)", type: 'C-C' as CatType },
+      { text: "천천히 다가와서 우아하게 앉아 기다린다.", textEn: "Approaches slowly and sits elegantly.", type: 'C-R' as CatType }
     ]
   },
   {
     id: 8,
-    question: "'[이름]'이의 최고의 개인기는?",
-    questionEn: "[name]'s best talent?",
+    question: "집사가 이름을 불렀을 때?",
+    questionEn: "When you call their name?",
     options: [
-      { text: "집사가 부르면 어디서든 대답하며 달려오기.", textEn: "Responding and running to you when called.", type: 'C-C' as CatType },
-      { text: "분명 집에 있는데, 아무도 날 찾을 수 없게 숨기.", textEn: "Hiding so well that no one can find them.", type: 'C-N' as CatType }
+      { text: "꼬리를 세우고 \"야옹~\" 대답하며 달려온다. (개냥이)", textEn: "Runs to you meowing with tail up.", type: 'C-C' as CatType },
+      { text: "귀만 씰룩. \"들리지만 가고 싶진 않아.\"", textEn: "Ear twitch. \"I hear you, but no.\"", type: 'C-N' as CatType }
     ]
   },
   {
     id: 9,
-    question: "집사가 무언가에 집중하고 있을 때?",
-    questionEn: "When you're focused on something?",
+    question: "집사가 낚싯대 장난감을 흔들 때?",
+    questionEn: "Waving the wand toy?",
     options: [
-      { text: "키보드 위로 올라오거나 책을 덮어버린다. (관심 요구)", textEn: "Sits on your keyboard or closes your book. (Demands attention)", type: 'C-R' as CatType },
-      { text: "방해되지 않게 멀리서 지켜보거나, 그냥 잔다.", textEn: "Watches from afar or just sleeps.", type: 'C-N' as CatType }
+      { text: "공중제비 돌고 난리 난다. 숨이 찰 때까지 사냥!", textEn: "Backflips and jumps! Hunts until panting.", type: 'C-G' as CatType },
+      { text: "누워서 앞발로만 툭... 툭... (귀찮음)", textEn: "Lays down and taps with one paw... (Lazy)", type: 'C-R' as CatType }
     ]
   },
   {
     id: 10,
-    question: "갑자기 작은 벌레가 나타났을 때?",
-    questionEn: "When a small bug suddenly appears?",
+    question: "가만히 있는데 갑자기 눈이 마주쳤을 때?",
+    questionEn: "Making eye contact out of nowhere?",
     options: [
-      { text: "동공이 확장되며 격렬한 사냥 모드로 돌입한다.", textEn: "Pupils dilate and enters intense hunt mode.", type: 'C-G' as CatType },
-      { text: "오히려 벌레를 무서워하며 뒷걸음질 친다.", textEn: "Actually gets scared and backs away.", type: 'C-N' as CatType }
+      { text: "눈을 천천히 깜빡여준다. (눈키스)", textEn: "Slow blinks at you. (Cat kiss)", type: 'C-C' as CatType },
+      { text: "뭘 봐? 고개를 홱 돌려버린다.", textEn: "What? Looks away immediately.", type: 'C-N' as CatType }
     ]
   }
 ];
@@ -192,92 +192,92 @@ export const catQuestions: QuizQuestion[] = [
 export const ownerQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "반려동물이 귀엽지만 '잘못된' 행동을 했을 때?",
-    questionEn: "When your pet does something 'wrong' but adorable?",
+    question: "반려동물이 실수로 내 에어팟을 씹어놨을 때...",
+    questionEn: "Pet chewed up your AirPods...",
     options: [
-      { text: "즉시 \"안 돼\"라고 말하며 올바른 행동을 가르친다.", textEn: "Immediately say 'No' and teach the right behavior.", type: 'O-T' as OwnerType },
-      { text: "일단 귀여워서 사진부터 찍고 나중에 생각한다.", textEn: "Take a photo first because it's too cute.", type: 'O-C' as OwnerType }
+      { text: "하... 귀여우니까 봐준다. (사진 찍어서 SNS에 올림)", textEn: "Sigh... Too cute to be mad. (Posts on SNS)", type: 'O-C' as OwnerType },
+      { text: "단호하게 \"안 돼!\" 훈육하고 터그 놀이로 스트레스를 풀어준다.", textEn: "Firm \"No!\" and redirects to toy play.", type: 'O-T' as OwnerType }
     ]
   },
   {
     id: 2,
-    question: "반려동물 사료나 간식을 고르는 기준은?",
-    questionEn: "How do you choose pet food or treats?",
+    question: "반려동물 사료를 고를 때 나는?",
+    questionEn: "Choosing pet food?",
     options: [
-      { text: "성분표와 영양 성분을 10분 이상 꼼꼼히 분석한다.", textEn: "Analyze ingredients and nutrition for 10+ minutes.", type: 'O-P' as OwnerType },
-      { text: "기호성 테스트! 일단 뭐든 잘 먹는 게 최고다.", textEn: "Taste test! Whatever they enjoy eating is best.", type: 'O-C' as OwnerType }
+      { text: "그레인프리? 휴먼그레이드? 성분표를 10분 이상 정독한다.", textEn: "Grain-free? Human-grade? Reads label for 10 mins.", type: 'O-P' as OwnerType },
+      { text: "기호성 테스트! 일단 샘플 먹여보고 잘 먹는 걸로 산다.", textEn: "Taste test! Buys whatever they eat best.", type: 'O-L' as OwnerType }
     ]
   },
   {
     id: 3,
-    question: "주말 아침, 당신의 이상적인 모습은?",
-    questionEn: "Your ideal weekend morning?",
+    question: "주말 아침, 눈을 떴는데 반려동물이 나를 보고 있을 때?",
+    questionEn: "Waking up to your pet staring at you?",
     options: [
-      { text: "반려동물과 함께 공원 산책이나 격렬한 놀이 활동하기.", textEn: "Walking in the park or active playtime with your pet.", type: 'O-T' as OwnerType },
-      { text: "반려동물을 껴안고 침대에서 함께 늦잠 자기.", textEn: "Sleeping in with your pet cuddled up.", type: 'O-C' as OwnerType }
+      { text: "일단 끌어안고 10분 더 뒹굴거린다. \"더 자자~\"", textEn: "Cuddle and snooze for 10 more mins.", type: 'O-C' as OwnerType },
+      { text: "바로 일어나서 산책 준비 or 아침 밥을 챙겨준다.", textEn: "Get up immediately for walk or breakfast.", type: 'O-T' as OwnerType }
     ]
   },
   {
     id: 4,
-    question: "반려동물이 갑자기 재채기를 한 번 했을 때?",
-    questionEn: "When your pet sneezes once?",
+    question: "반려동물이 재채기를 '에취!' 했을 때?",
+    questionEn: "Your pet sneezes once?",
     options: [
-      { text: "즉시 스마트폰으로 \"강아지/고양이 재채기 원인\"을 검색한다.", textEn: "Immediately search 'why does my pet sneeze'.", type: 'O-P' as OwnerType },
-      { text: "\"감기 걸렸어?\"하고 웃어넘기거나 별생각 없이 지나간다.", textEn: "Just laugh it off or don't think much of it.", type: 'O-L' as OwnerType }
+      { text: "\"감기인가? 병원 가야 하나?\" 검색창을 켠다.", textEn: "\"Is it a cold? Vet?\" Starts Googling.", type: 'O-P' as OwnerType },
+      { text: "\"아이구 시원해?\" 하고 엉덩이를 두드려준다.", textEn: "\"Bless you!\" and pats them.", type: 'O-L' as OwnerType }
     ]
   },
   {
     id: 5,
-    question: "반려동물이 내 밥을 빤히 쳐다볼 때?",
-    questionEn: "When your pet stares at your food?",
+    question: "내가 치킨(또는 피자)을 먹는데 애절하게 쳐다볼 때?",
+    questionEn: "Begging while you eat chicken/pizza?",
     options: [
-      { text: "(사람 음식은 안 좋으니까) 차분히 무시하거나 반려동물 간식을 준다.", textEn: "Calmly ignore or give pet treats instead.", type: 'O-T' as OwnerType },
-      { text: "(안전한 거라면) 아주 작은 조각을 몰래 떼어준다.", textEn: "Sneak them a tiny piece if it's safe.", type: 'O-C' as OwnerType }
+      { text: "절대 안 됨. 사람 음식은 건강에 해로움.", textEn: "Absolutely not. Human food is bad.", type: 'O-T' as OwnerType },
+      { text: "살코기 부분만 물에 씻어서 아주 조...금 준다.", textEn: "Washes a tiny piece of meat and gives it.", type: 'O-C' as OwnerType }
     ]
   },
   {
     id: 6,
-    question: "반려동물을 위해 주로 구매하는 것은?",
-    questionEn: "What do you usually buy for your pet?",
+    question: "반려동물 용품 쇼핑 중, 내 장바구니에는?",
+    questionEn: "Shopping for pet supplies, your cart has?",
     options: [
-      { text: "두뇌 활동에 좋은 새로운 노즈워크 장난감이나 퍼즐.", textEn: "Brain-stimulating toys or puzzles.", type: 'O-T' as OwnerType },
-      { text: "관절, 피부, 눈 건강 등을 위한 각종 영양제.", textEn: "Supplements for joints, skin, eyes, etc.", type: 'O-P' as OwnerType }
+      { text: "관절 영양제, 유산균, 치석 제거 껌...", textEn: "Joint supplements, probiotics, dental chews...", type: 'O-P' as OwnerType },
+      { text: "신상 장난감, 귀여운 옷, 예쁜 목줄...", textEn: "New toys, cute outfits, pretty leash...", type: 'O-C' as OwnerType }
     ]
   },
   {
     id: 7,
-    question: "반려동물과 함께하는 가장 행복한 순간은?",
-    questionEn: "Happiest moment with your pet?",
+    question: "산책 중 다른 강아지가 으르렁거릴 때?",
+    questionEn: "Another dog growls during walk?",
     options: [
-      { text: "특별한 것 없이, 그냥 조용히 같은 공간에 함께 있을 때.", textEn: "Just quietly being in the same space together.", type: 'O-L' as OwnerType },
-      { text: "반려동물과 새로운 기술이나 훈련에 성공했을 때.", textEn: "When successfully teaching a new trick or training.", type: 'O-T' as OwnerType }
+      { text: "내 새끼 지켜! 바로 안아 올리거나 길을 건넌다.", textEn: "Protect my baby! Pick up or cross street.", type: 'O-P' as OwnerType },
+      { text: "차분하게 \"괜찮아\" 하고 무시하며 지나간다.", textEn: "Calmly say \"It's okay\" and walk past.", type: 'O-T' as OwnerType }
     ]
   },
   {
     id: 8,
-    question: "산책/외출 시 다른 반려동물을 만났을 때?",
-    questionEn: "When meeting other pets outside?",
+    question: "반려동물과 함께하는 삶에서 가장 중요한 것은?",
+    questionEn: "Most important thing in pet life?",
     options: [
-      { text: "'혹시 싸우진 않을까' 걱정하며 안전거리부터 확보한다.", textEn: "Worry about fights and keep a safe distance first.", type: 'O-P' as OwnerType },
-      { text: "\"친구 만났네!\" 사회성을 기를 좋은 기회라고 생각한다.", textEn: "Think 'New friend!' - a good socialization opportunity.", type: 'O-T' as OwnerType }
+      { text: "규칙적인 생활과 올바른 예절 교육.", textEn: "Routine and proper training.", type: 'O-T' as OwnerType },
+      { text: "스트레스 없이 서로 편안하고 행복한 것.", textEn: "Stress-free, comfortable happiness.", type: 'O-L' as OwnerType }
     ]
   },
   {
     id: 9,
-    question: "내 스마트폰 카메라 앨범의 90%는?",
-    questionEn: "90% of your phone's photo gallery?",
+    question: "핸드폰 갤러리를 열었을 때?",
+    questionEn: "Opening your phone gallery?",
     options: [
-      { text: "당연히 우리 애기 자는 모습, 노는 모습, 귀여운 모습.", textEn: "Obviously my baby sleeping, playing, being cute.", type: 'O-C' as OwnerType },
-      { text: "반려동물 사진도 있지만, 내 셀카나 풍경 사진도 많다.", textEn: "Pet photos, but also selfies and scenery.", type: 'O-L' as OwnerType }
+      { text: "비슷해 보이지만 다 다른 우리 애기 사진 5,000장.", textEn: "5,000 photos of my pet (all look same but different).", type: 'O-C' as OwnerType },
+      { text: "반려동물 사진 반, 내 일상 사진 반.", textEn: "Half pet photos, half my life.", type: 'O-L' as OwnerType }
     ]
   },
   {
     id: 10,
-    question: "반려동물과 함께 있을 때 나의 주된 감정은?",
-    questionEn: "Your main feeling when with your pet?",
+    question: "반려동물을 보며 자주 하는 생각은?",
+    questionEn: "What you think often looking at your pet?",
     options: [
-      { text: "'더 필요한 건 없나', '어디 아픈 덴 없나' 항상 염려된다.", textEn: "Always worried if they need anything or are sick.", type: 'O-P' as OwnerType },
-      { text: "그냥 보고만 있어도 마음이 편안하고 안정된다.", textEn: "Just peaceful and comforted by their presence.", type: 'O-L' as OwnerType }
+      { text: "\"아프지 말고 오래오래만 살아줘.\"", textEn: "\"Just stay healthy and live forever.\"", type: 'O-P' as OwnerType },
+      { text: "\"너 때문에 내가 웃는다. 고마워.\"", textEn: "\"You make me smile. Thank you.\"", type: 'O-C' as OwnerType }
     ]
   }
 ];
