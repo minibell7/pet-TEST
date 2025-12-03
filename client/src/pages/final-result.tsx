@@ -12,6 +12,7 @@ import { useI18n } from '@/lib/i18n';
 import { LanguageToggle } from '@/components/language-toggle';
 import { toPng } from 'html-to-image';
 import type { PetType, OwnerType, PetSpecies } from '@shared/schema';
+import { AdBanner } from '@/components/ad-banner';
 
 export default function FinalResult() {
   const [, setLocation] = useLocation();
@@ -199,6 +200,9 @@ export default function FinalResult() {
             View Detail
           </Button>
         </div>
+
+        {/* Ad Banner */}
+        <AdBanner className="my-6" />
 
         {/* Recommended Features (Clutter-free) */}
         <div className="space-y-4 pt-8 border-t border-border/50">

@@ -4,6 +4,7 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import { LanguageToggle } from '@/components/language-toggle';
 import { useI18n } from '@/lib/i18n';
 import { Heart, Sparkles, Cake, Calculator, MessageCircle } from 'lucide-react';
+import { AdBanner } from '@/components/ad-banner';
 
 export default function Home() {
     const { t } = useI18n();
@@ -88,6 +89,9 @@ export default function Home() {
                         </Link>
                     ))}
                 </div>
+
+                {/* Ad Banner */}
+                <AdBanner className="mt-8" />
 
                 {/* Footer Message */}
                 <div className="text-center pt-12 text-sm text-muted-foreground animate-in fade-in duration-1000 delay-500">

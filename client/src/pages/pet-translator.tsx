@@ -7,6 +7,7 @@ import { ArrowLeft, Mic, Activity, Sparkles } from 'lucide-react';
 import { useI18n } from '@/lib/i18n';
 import { LanguageToggle } from '@/components/language-toggle';
 import { DOG_BEHAVIORS, CAT_BEHAVIORS, BehaviorCategory, BehaviorItem } from '@/data/pet-behavior';
+import { AdBanner } from '@/components/ad-banner';
 
 export default function PetTranslator() {
     const [, setLocation] = useLocation();
@@ -129,6 +130,8 @@ export default function PetTranslator() {
                                 </CardContent>
                             </Card>
                         )}
+
+                        {result && <AdBanner className="max-w-md mx-auto mt-6" />}
                     </div>
                 </Tabs>
             </div>

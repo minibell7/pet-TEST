@@ -14,6 +14,7 @@ import { getDailyFortune } from '@/data/fortuneData';
 import { getTypeInfo } from '@/data/typeInfo';
 import { ArrowLeft, Sparkles, RefreshCw, Star, Gift } from 'lucide-react';
 import { useI18n } from '@/lib/i18n';
+import { AdBanner } from '@/components/ad-banner';
 import { LanguageToggle } from '@/components/language-toggle';
 import type { PetType, OwnerType } from '@shared/schema';
 
@@ -196,6 +197,8 @@ export default function DailyFortune() {
               })}
             </div>
 
+            <AdBanner className="my-6" />
+
             <Button
               variant="outline"
               onClick={() => setShowFortune(false)}
@@ -207,6 +210,6 @@ export default function DailyFortune() {
           </div>
         )}
       </div>
-    </div>
+    </div >
   );
 }
