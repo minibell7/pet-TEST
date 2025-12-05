@@ -23,6 +23,7 @@ import AgeCalculatorPage from "@/pages/age-calculator-page";
 import NotFound from "@/pages/not-found";
 
 import CompatibilityDetail from "@/pages/compatibility-detail";
+import { FamilySiteLink } from "@/components/family-site-link";
 
 function Router() {
   return (
@@ -56,6 +57,7 @@ function App() {
           <TooltipProvider>
             <Toaster />
             <Router />
+            <FamilySiteLink />
           </TooltipProvider>
         </ThemeProvider>
       </I18nProvider>
