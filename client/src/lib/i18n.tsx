@@ -24,7 +24,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (saved) return saved as Language;
     
     // 브라우저 언어 자동 감지
-    const browserLang = navigator.language.toLowerCase();
+    const browserLang = (navigator.language || 'ko').toLowerCase();
     return browserLang.startsWith('ko') ? 'ko' : 'en';
   });
 
